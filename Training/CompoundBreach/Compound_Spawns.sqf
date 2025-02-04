@@ -139,7 +139,11 @@ switch (_case) do {
 
 	case 7: {
 		[Compound_Index_7,_ProcentageOfTargets] spawn _code;
-	};		
+	};	
+
+	case 8: {
+		[Compound_Index_8,_ProcentageOfTargets] spawn _code;
+	};			
 
 	default {
 		systemChat format["Case missing: %1", _case];

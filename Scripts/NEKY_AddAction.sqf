@@ -25,6 +25,8 @@
 
 Params ["_Object","_Name","_Variable","_Delete","_RemoveAction",["_VariableValue",true,[true]],["_Condition","true",[""]]];
 
+systemChat str _this;
+
 // Exit if object is missing/dead
 if !(Alive _Object) exitWith {};
 
