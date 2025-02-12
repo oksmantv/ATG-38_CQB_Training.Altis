@@ -46,4 +46,6 @@ OKS_Mechanized_Spawn = compile preprocessFileLineNumbers "Scripts\OKS_Spawn\OKS_
 OKS_RemoveVehicleHE = compile preprocessFileLineNumbers "Scripts\OKS_Spawn\OKS_RemoveVehicleHE.sqf";
 OKS_ForceVehicleSpeed = compile preprocessFileLineNumbers "Scripts\OKS_Spawn\OKS_ForceVehicleSpeed.sqf";
 //OKS_ScudLaunch = compile preprocessFileLineNumbers "Scripts\OKS_Spawn\OKS_ScudLaunch.sqf";
+OKS_SpawnStatic = compile preprocessFileLineNumbers "Scripts\OKS_Spawn\OKS_SpawnStatic.sqf";
+OKS_Scout = compile preprocessFileLineNumbers "Scripts\OKS_Spawn\OKS_Scout.sqf";
 //OKS_Static_Spawner = compile preprocessFileLineNumbers "Scripts\OKS_Spawn\OKS_Static_Spawner.sqf";

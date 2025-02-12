@@ -47,7 +47,7 @@ _bipod = "";
 
 _rifle = ["UK3CB_BAF_L85A2", _silencer, _pointer, _sight, _bipod];
 _rifleC = ["UK3CB_BAF_L22", _silencer, _pointer, _sight, _bipod];
-_rifleGL = ["UK3CB_BAF_L85A2_UGL_HWS", _silencer, _pointer, _sight, _bipod];
+_rifleGL = ["UK3CB_BAF_L85A2_UGL", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["UK3CB_BAF_L86A2", _silencer, _pointer, _sight, _bipod];
 _rifle_mag = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 _rifle_mag_tr = "UK3CB_BAF_556_30Rnd_T";

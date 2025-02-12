@@ -8,7 +8,6 @@
 	execVM "Scripts\OKS_Vehicles\Init.sqf";	
 	execVM "FAC_Teleport.sqf";
 	execVM "Training\Init.sqf";
-	execVM "Medical\Init.sqf";	
 	if(GOL_NEKY_SERVICESTATION isEqualTo 1) then { execVM "Scripts\NEKY_ServiceStation\Init.sqf"};
 	if(GOL_NEKY_AIRDROP isEqualTo 1) then {	execVM "Scripts\NEKY_AirDrop\Init.sqf"};
 	if(GOL_NEKY_HUNT isEqualTo 1) then { execVM "Scripts\NEKY_Hunt\Init.sqf"};

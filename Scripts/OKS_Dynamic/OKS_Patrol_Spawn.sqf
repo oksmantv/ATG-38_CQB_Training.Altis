@@ -1,11 +1,17 @@
 /*
 	OKS_Patrol_Spawn
+	[Trigger,5,200,EAST,["O_Soldier_F"]] spawn OKS_Patrol_Spawn;
 	[Trigger,5,200,EAST,["O_Soldier_F"]] execVM "Scripts\OKS_Dynamic\OKS_Patrol_Spawn.sqf";
 */
 
  	if(!isServer) exitWith {};
 
-	Params ["_Area","_NumberInfantry","_Range","_Side"];
+	Params [
+		"_Area",
+		["_NumberInfantry",2,[0]],
+		["_Range",50,[0]],
+		["_Side",east,[sideUnknown]]
+	];
 	private ["_Spawnpos","_RandomPos"];
 
 	_Settings = [_Side] call OKS_Dynamic_Setting;

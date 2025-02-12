@@ -22,7 +22,7 @@ if(isNil "_cswGunBackpack") then {
 if(isNil "_cswTripodBackpack") then {
 	_cswTripodBackpack = "RHS_DShkM_TripodLow_Bag";
 };
-
+_grenademini = "";
 switch (toLower(_role)) do {
 
 	case "officer": {
