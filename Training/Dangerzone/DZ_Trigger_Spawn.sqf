@@ -180,7 +180,7 @@ _SpawnMovingUnitCode = {
 	waitUntil {sleep 1; !isNil "lambs_wp_fnc_moduleRush"};
 	_WP = _EnemyGroup addWaypoint [_Crossing,0];
 	_WP setWaypointType "SAD";
-	[_EnemyGroup,200,5,[],[],false] remoteExec ["lambs_wp_fnc_taskRush",0];
+	//[_EnemyGroup,200,5,[],[],false] remoteExec ["lambs_wp_fnc_taskRush",0];
 	systemChat "MovingTarget Rush";
 };
 _SpawnUnitCode = {
