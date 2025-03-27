@@ -11,16 +11,16 @@ Params [
 	"_Terminal"
 ];
 
-if(isNil "_DirectionArray") exitWith { systemChat "_DirectionArray undefined. Exiting." };
-if(isNil "_Index") exitWith { systemChat "_Index undefined. Exiting." };
-if(isNil "_Reversed") exitWith { systemChat "_Reversed undefined. Exiting." };
-if(isNil "_Terminal") exitWith { systemChat "_Terminal undefined. Exiting." };
+if(isNil "_DirectionArray") exitWith { "_DirectionArray undefined. Exiting." remoteExec ["DZ_Debug",0];; };
+if(isNil "_Index") exitWith { "_Index undefined. Exiting." remoteExec ["DZ_Debug",0];; };
+if(isNil "_Reversed") exitWith { "_Reversed undefined. Exiting." remoteExec ["DZ_Debug",0];; };
+if(isNil "_Terminal") exitWith { "_Terminal undefined. Exiting." remoteExec ["DZ_Debug",0];; };
 
 if(_Terminal getVariable ["DZ_CourseActive",0] > 1) exitWith {
 	{
 		[_X, true] spawn DZ_ForeachUnits;	
 	} forEach _DirectionArray;
-	SystemChat "IsLiveExit"
+	format["%1 - Course is live - Exiting CleanUp."] remoteExec ["DZ_Debug",0];;
 };
 
 if(_Index in [0,1]) then {
@@ -29,11 +29,13 @@ if(_Index in [0,1]) then {
 
 if(_Index == 2) then {
 	If(_Reversed) then {
-		[_DirectionArray select 0, false] spawn DZ_ForeachUnits;	
-		[_DirectionArray select 1, true] spawn DZ_ForeachUnits;	
-	} else {
+		//systemChat "IsReversed - Hiding Normal";
+		[_DirectionArray select 1, false] spawn DZ_ForeachUnits;	
 		[_DirectionArray select 0, true] spawn DZ_ForeachUnits;	
-		[_DirectionArray select 1, false] spawn DZ_ForeachUnits;			
+	} else {
+		//systemChat "NotReversed - Hiding Reversed";
+		[_DirectionArray select 1, true] spawn DZ_ForeachUnits;	
+		[_DirectionArray select 0, false] spawn DZ_ForeachUnits;			
 	}
 };
 

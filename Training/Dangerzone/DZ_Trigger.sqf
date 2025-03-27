@@ -23,12 +23,12 @@ if(_isFront) then {
 };
 
 if((random 1) <= _Chance) then {
-	//systemChat "Side Spawn - Passed Chance";
 	_FirstSelect = selectRandom _SelectedSides;
-	_SelectedSides deleteAt (_SelectedSides find _FirstSelect);	
+	_SelectedSides deleteAt (_SelectedSides find _FirstSelect);
+	format["%1 Spawn - Passed Chance",_FirstSelect] remoteExec ["DZ_Debug",0];
  	[_Terminal,_ZoneTrigger,_CourseNumber,_CrossingNumber,_FirstSelect,_isReversed] spawn DZ_Trigger_Spawn;
 } else {
-	//systemChat "Side Spawn - Failed Chance";
+	format["%1 Spawn - Failed Chance",_SelectedSides] remoteExec ["DZ_Debug",0];
 };
 
 sleep 2 + (random 4);
@@ -36,6 +36,6 @@ sleep 2 + (random 4);
 if(count _SelectedSides > 0) then {
 	_SecondSelect = selectRandom _SelectedSides;	
 	[_Terminal,_ZoneTrigger,_CourseNumber,_CrossingNumber,_SecondSelect,_isReversed] spawn DZ_Trigger_Spawn;
-	//systemChat "Side Spawn - Second Spawn";
+	format["%1 Spawn - Second Spawn",_SecondSelect] remoteExec ["DZ_Debug",0];
 };
 

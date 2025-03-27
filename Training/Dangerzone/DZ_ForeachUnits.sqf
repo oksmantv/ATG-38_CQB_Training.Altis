@@ -1,22 +1,21 @@
-// [_Targets_1,false,_Terminal] spawn DZ_ForeachUnits;
+// [_Targets_1,false] spawn DZ_ForeachUnits;
 
 Params [
 	"_UnitsArray",
 	"_Hide"
 ];
 
-if(isNil "_UnitsArray") exitWith { systemChat "_UnitsArray undefined. Exiting." };
-if(isNil "_Hide") exitWith { systemChat "_Hide undefined. Exiting." };
-
+if(isNil "_UnitsArray") exitWith { "_UnitsArray undefined. Exiting." remoteExec ["DZ_Debug",0]; };
+if(isNil "_Hide") exitWith { "_Hide undefined. Exiting." remoteExec ["DZ_Debug",0]; };
 
 {
 	if(
 		["front", str (vehicleVarName _X)] call BIS_fnc_inString || 
 		["reverse", str (vehicleVarName _X)] call BIS_fnc_inString
 	) then {
-		systemChat str [_X,_Hide];
+		format["%1 - Hidden Value: %2",_X,_Hide] remoteExec ["DZ_Debug",0];;
 	};
-	//systemChat "Hiding " + str _X;
+
 	_X hideObjectGlobal _Hide;
 	_X animateSource ["terc", 1]; sleep 0.05;
 	_X setVariable ["TargetDown",false,true];		

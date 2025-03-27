@@ -1,4 +1,13 @@
-	Params ["_TargetArray"];
+	Params ["_TargetArray",["_Percentage",100,[0]]];
+
+	private _Percentage = _Percentage / 100;
+	private _AmountOfTargets = round(count _TargetArray * _Percentage);
+	private _SelectedTargets = [];
+
+	while {count _SelectedTargets < _AmountOfTargets} do {
+		_SelectedTargets pushBackUnique (selectRandom _TargetArray);
+	};
+
 
 	private _UnitTypes = [
 		"O_Soldier_AR_F", "O_soldier_M_F", "O_Soldier_F", 
@@ -18,4 +27,4 @@
 		_Unit disableAI "PATH";
 		_Unit setUnitPos "UP";
 		_X hideObjectGlobal true
-	} foreach _TargetArray;
+	} foreach _SelectedTargets;

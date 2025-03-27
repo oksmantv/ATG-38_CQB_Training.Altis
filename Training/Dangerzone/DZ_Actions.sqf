@@ -1,11 +1,8 @@
 Params ["_Object","_CourseNumber","_ZoneTrigger"];
 
-// [this,1] execVM "DZ_Actions.sqf"
-// [this,1] spawn DZ_Actions;
+If(!isServer) exitWith { false };
 
-waitUntil{!isNil "DZ_Trigger_Spawn"};
-
-_Object addAction
+[_Object,
 [
 	"<t color='#32ec08'>Start Dry-Run</t>",	// title
 	{
@@ -13,15 +10,15 @@ _Object addAction
 		_arguments params ["_CourseNumber","_ZoneTrigger"];
 
 		// Reset Targets
-		_target setVariable ["DZ_CourseActive",0];
+		_target setVariable ["DZ_CourseActive",0,true];
 		[_target,_ZoneTrigger,_CourseNumber,1,nil,false] spawn DZ_Trigger_Spawn;
-		[_target,_caller] spawn {
-			params ["_target","_caller"];
+		[_target,_caller,_CourseNumber] spawn {
+			params ["_target","_caller","_CourseNumber"];
 			playSound3D [getMissionPath "activated.wav", _target, false, getPosASL _target, 5, 1, 50];
 			sleep 0.5;
-			_target setVariable ["DZ_CourseActive",1];
+			_target setVariable ["DZ_CourseActive",1,true];
 			sleep 3;
-			"DZ Course 1 - Ready - Dry Run" remoteExec ["systemChat",0];
+			format["DZ Course %1 - Ready - Dry Run",_CourseNumber] remoteExec ["systemChat",0];
 			"OKS_Buzzer" remoteExec ["PlaySound",units (group _caller)];						
 		};
 	},
@@ -31,27 +28,27 @@ _Object addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"true",		// condition
-	50,			// radius
+	15,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
-];
+]] remoteExec ["addAction",0];
 
-_Object addAction
+[_Object,
 [
 	"<t color='#32ec08'>Start Live-Run (1)</t>",	// title
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"]; // script
 		_arguments params ["_CourseNumber","_ZoneTrigger"];
-		_target setVariable ["DZ_CourseActive",0];
+		_target setVariable ["DZ_CourseActive",0,true];
 		[_target,_ZoneTrigger,_CourseNumber,1,nil,false] spawn DZ_Trigger_Spawn;
-		[_target,_caller] spawn {
-			params ["_target","_caller"];
-			playSound3D [getMissionPath "activated.wav", _target, false, getPosASL _target, 5, 1, 50];
+		[_target,_caller,_CourseNumber] spawn {
+			params ["_target","_caller","_CourseNumber"];
+			playSound3D [getMissionPath "activated.wav", _target, false, getPosASL _target, 5, 1, 15];
 			sleep 0.5;
-			_target setVariable ["DZ_CourseActive",2];
+			_target setVariable ["DZ_CourseActive",2,true];
 			sleep 3;
-			"DZ Course 1 - Ready - Level 1" remoteExec ["systemChat",0];
+			format["DZ Course %1 - Ready - Level 1",_CourseNumber] remoteExec ["systemChat",0];
 			"OKS_Buzzer" remoteExec ["PlaySound",units (group _caller)];
 		};
 	},
@@ -61,28 +58,28 @@ _Object addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"true",		// condition
-	50,			// radius
+	15,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
-];
+]] remoteExec ["addAction",0];
 
-_Object addAction
+[_Object,
 [
 	"<t color='#32ec08'>Start Live-Run (2)</t>",	// title
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"]; // script
 		_arguments params ["_CourseNumber","_ZoneTrigger"];
-		_target setVariable ["DZ_CourseActive",0];
+		_target setVariable ["DZ_CourseActive",0,true];
 		[_target,_ZoneTrigger,_CourseNumber,1,nil,"front",false] spawn DZ_Trigger_Spawn;
-		[_target,_caller] spawn {
-			params ["_target","_caller"];
+		[_target,_caller,_CourseNumber] spawn {
+			params ["_target","_caller","_CourseNumber"];
 
 			playSound3D [getMissionPath "activated.wav", _target, false, getPosASL _target, 5, 1, 50];
 			sleep 0.5;
-			_target setVariable ["DZ_CourseActive",3];
+			_target setVariable ["DZ_CourseActive",3,true];
 			sleep 3;
-			"DZ Course 1 - Ready - Level 2" remoteExec ["systemChat",0];
+			format["DZ Course %1 - Ready - Level 2", _CourseNumber] remoteExec ["systemChat",0];
 			"OKS_Buzzer" remoteExec ["PlaySound",units (group _caller)];			
 		};
 	},
@@ -96,5 +93,5 @@ _Object addAction
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
-];
+]] remoteExec ["addAction",0];
 
