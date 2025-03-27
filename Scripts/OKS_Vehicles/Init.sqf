@@ -34,14 +34,28 @@ if (hasInterface && !isServer) exitWith {false};	// Ensures only server or HC ru
 //OKS_CreateCrew = compile preprocessFileLineNumbers "Scripts\OKS_Vehicles\OKS_CreateCrew.sqf";
 OKS_Helicopter = compile preprocessFileLineNumbers "Scripts\OKS_Vehicles\OKS_Helicopter.sqf";
 OKS_Mechanized = compile preprocessFileLineNumbers "Scripts\OKS_Vehicles\OKS_Mechanized.sqf";
-OKS_ReduceDamage = compile preprocessFileLineNumbers "Scripts\OKS_Vehicles\OKS_ReduceDamage.sqf";
+OKS_Retexture = compile preprocessFileLineNumbers "Scripts\OKS_Vehicles\OKS_Retexture.sqf";
+OKS_AdjustDamage = compile preprocessFileLineNumbers "Scripts\OKS_Vehicles\OKS_AdjustDamage.sqf";
 OKS_DAP_Config = compile preprocessFileLineNumbers "Scripts\OKS_Vehicles\OKS_DAP_Config.sqf";
 OKS_Interact_Apply = compile preprocessFileLineNumbers "Scripts\OKS_Vehicles\OKS_Interact_Apply.sqf";
 OKS_Interact_Copilot = compile preprocessFileLineNumbers "Scripts\OKS_Vehicles\OKS_Interact_Copilot.sqf";
 OKS_Interact_DoorGunner = compile preprocessFileLineNumbers "Scripts\OKS_Vehicles\OKS_Interact_DoorGunner.sqf";
 OKS_Interact_Pilot = compile preprocessFileLineNumbers "Scripts\OKS_Vehicles\OKS_Interact_Pilot.sqf";
+OKS_AbandonVehicle = compile preprocessFileLineNumbers "Scripts\OKS_Vehicles\OKS_AbandonVehicle.sqf";
+OKS_RemoveVehicleHE = compile preprocessFileLineNumbers "Scripts\OKS_Vehicles\OKS_RemoveVehicleHE.sqf";
+OKS_ForceVehicleSpeed = compile preprocessFileLineNumbers "Scripts\OKS_Vehicles\OKS_ForceVehicleSpeed.sqf";
 
 sleep 5;
+
+if(isServer) then {
+	_whitelistedVehicles = vehicles select { 
+		(["T34", typeOf _X] call BIS_fnc_inString || ["T55", typeOf _X] call BIS_fnc_inString ||
+		["T72", typeOf _X] call BIS_fnc_inString || ["T80", typeOf _X] call BIS_fnc_inString) && ["UK3CB", typeOf _X] call BIS_fnc_inString
+	};
+	{
+		[_X] spawn OKS_AdjustDamage; sleep 0.25;
+	} foreach _whitelistedVehicles;
+};
 
 [nil,GOL_AAC_DoorGunReplacement] spawn OKS_DAP_Config;
 

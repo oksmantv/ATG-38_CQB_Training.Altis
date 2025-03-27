@@ -125,7 +125,19 @@ if ((count _vehicleArray) > 0) then {
 		if (_collision isEqualTo "FLY") then {
 			_vehicle engineOn true;
 			_vehicle flyInHeight (_pos select 2);
+		};	
+		if(["T55", typeOf _vehicle] call BIS_fnc_inString && ["UK3CB", typeOf _vehicle] call BIS_fnc_inString) then {
+			[_vehicle] spawn OKS_AdjustDamage;
 		};
+		if(["T34", typeOf _vehicle] call BIS_fnc_inString && ["UK3CB", typeOf _vehicle] call BIS_fnc_inString) then {
+			[_vehicle] spawn OKS_AdjustDamage;
+		};
+		if(["T72", typeOf _vehicle] call BIS_fnc_inString && ["UK3CB", typeOf _vehicle] call BIS_fnc_inString) then {
+			[_vehicle] spawn OKS_AdjustDamage;
+		};
+		// if(["T80", typeOf _vehicle] call BIS_fnc_inString && ["UK3CB", typeOf _vehicle] call BIS_fnc_inString) then {
+		// 	[_vehicle] spawn OKS_AdjustDamage;
+		// };			
 
 		_vehicle setVariable [QEGVAR(gear,side), GVAR(Faction)];
 
@@ -190,6 +202,7 @@ if ((count _vehicleArray) > 0) then {
 			};
 		} forEach _crewList;
 
+		[_vehicle] spawn OKS_AbandonVehicle;
 		_vehicle enableSimulationGlobal true;
 		[_vehicle] spawn OKS_ForceVehicleSpeed;  
 		TRACE_1("Units added to vehicle", _groupNew);

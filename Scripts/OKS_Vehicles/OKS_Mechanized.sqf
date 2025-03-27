@@ -7,6 +7,7 @@ if(!isServer) exitWith {};
 Params
 [
 	["_Vehicle", ObjNull, [ObjNull]],
+	["_Flag",nil,[""]],
 	["_AddMortar", false, [true]],
 	["_ServiceStation", true, [true]],
 	["_ShouldDisableThermal", true, [true]],
@@ -15,6 +16,10 @@ Params
 ];
 
 sleep 5;
+
+if(!isNil "_Flag") then {
+	_Vehicle forceFlagTexture _Flag;
+};
 
 Private _Debug_Variable = false;
 _Vehicle setVariable ["GW_Disable_autoRemoveCargo",true,true];
@@ -67,8 +72,14 @@ if(_ServiceStation && !(_Vehicle getVariable ["GOL_isMSS",false]) && GOL_NEKY_SE
 	};
 };
 
-_Vehicle addItemCargoGlobal ["Toolkit",2];
-_Vehicle addMagazineCargoGlobal ["SatchelCharge_Remote_Mag",5];
+_Vehicle addItemCargoGlobal ["Toolkit",1];
+_Vehicle addMagazineCargoGlobal ["SatchelCharge_Remote_Mag",2];
+_Vehicle addMagazineCargoGlobal ["DemoCharge_Remote_Mag",4];
+_Vehicle addWeaponCargoGlobal ["rhs_weap_fim92",2];
+_Vehicle addMagazineCargoGlobal ["Titan_AA",10];
+_Vehicle addMagazineCargoGlobal ["ACE_rope6",1];
+_Vehicle addMagazineCargoGlobal ["ACE_rope12",1];
+
 if(_AddMortar) then {
 	if(_Debug_Variable) then {SystemChat "Adding Mortar Equipment"};
 	//add a new backpack to the vehicle
