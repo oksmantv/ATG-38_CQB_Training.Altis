@@ -69,7 +69,7 @@ if(_RandomSpawn) then {
 
 		// Setup Unit
 		if(_Debug_Variable) then {SystemChat format ["%1 Pos %2",group _unit,getPos _Unit]};
-		_Unit disableAI "PATH";
+		_Unit disableAI "MOVE";
 		_Unit setUnitPos (selectRandom ["UP","MIDDLE"]);
 		_Unit addMPEventHandler ["MPKilled",{[_this select 0] spawn AI_Death}];
 		_Unit setBehaviour "COMBAT";
@@ -108,7 +108,7 @@ if(_RandomSpawn) then {
 sleep 2;
 playSound3D [MISSION_ROOT + "activated.wav", _Target, false, _Target, 5, 1, 25];
 [_Target,0] call BIS_fnc_dataTerminalAnimate;
-waitUntil{triggerActivated _Trigger};
+waitUntil{triggerActivated _Trigger && count list _Trigger > 1};
 _Time = 0;
 waitUntil{sleep 0.01; _Time = _Time + 0.01; {!Alive _X || !([_X] call ace_common_fnc_isAwake)} count units _LiveTargets isEqualTo (count units _LiveTargets)};
 

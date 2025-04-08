@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={24530.674,28.190001,19077.426};
-		dir[]={0.59003305,-0.71114486,-0.38227844};
-		up[]={0.59682959,0.70304465,-0.38668236};
-		aside[]={-0.54374582,9.4296411e-08,-0.83925205};
+		pos[]={24580.719,43.671528,19109.111};
+		dir[]={-0.61405879,-0.48796001,-0.62034589};
+		up[]={-0.34327859,0.87286568,-0.34679297};
+		aside[]={-0.71069956,-3.259629e-08,0.70349681};
 	};
 };
 binarizationWanted=0;
@@ -74,7 +74,6 @@ addons[]=
 	"A3_Structures_F_Civ_Camping",
 	"drongosaps",
 	"A3_Modules_F",
-	"UK3CB_Factions_CW_US_B_LATE",
 	"A3_Props_F_Decade_Objectives",
 	"A3_Structures_F_Walls",
 	"A3_Structures_F_Mark_Training",
@@ -140,7 +139,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=72;
+		items=71;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -366,252 +365,245 @@ class AddonsMetaData
 		};
 		class Item33
 		{
-			className="UK3CB_Factions_CW_US";
-			name="3CB Factions - CW_US";
-			author="3 Commando Brigade";
-			url="www.3commandobrigade.com";
-		};
-		class Item34
-		{
 			className="A3_Props_F_Decade_Objectives";
 			name="A3_Props_F_Decade_Objectives";
 		};
-		class Item35
+		class Item34
 		{
 			className="A3_Structures_F_Mark";
 			name="Arma 3 Marksmen - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item36
+		class Item35
 		{
 			className="A3_Props_F_Exp_A";
 			name="Arma 3 Nexus Update - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item37
+		class Item36
 		{
 			className="A3_Misc_F";
 			name="Arma 3 - 3D Aids and Helpers";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item38
+		class Item37
 		{
 			className="A3_Structures_F_Exp";
 			name="Arma 3 Apex - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item39
+		class Item38
 		{
 			className="emr_main";
 			name="Enhanced Movement Rework";
 			author="Simplex Team";
 			url="https://github.com/SceptreOfficial/Enhanced-Movement-Rework";
 		};
-		class Item40
+		class Item39
 		{
 			className="ace_logistics_wirecutter";
 			name="ACE3 - Logistics Wire Cutter";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item41
+		class Item40
 		{
 			className="ace_concertina_wire";
 			name="ACE3 - Concertina Wire";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item42
+		class Item41
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item43
+		class Item42
 		{
 			className="A3_Structures_F_Enoch";
 			name="Arma 3 Contact Platform - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item44
+		class Item43
 		{
 			className="A3_Structures_F_Wrecks";
 			name="Arma 3 - Vehicle Wrecks";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item45
+		class Item44
 		{
 			className="CUP_Misc3_Config";
 			name="CUP_Misc3_Config";
 		};
-		class Item46
+		class Item45
 		{
 			className="UK3CB_Factions_CHD";
 			name="3CB Factions - CHD";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item47
+		class Item46
 		{
 			className="UK3CB_Factions_CHD_W";
 			name="3CB Factions - CHD_W";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item48
+		class Item47
 		{
 			className="A3_Structures_F_Argo";
 			name="Arma 3 Malden - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item49
+		class Item48
 		{
 			className="UK3CB_Factions_ADG";
 			name="3CB Factions - ADG";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item50
+		class Item49
 		{
 			className="UK3CB_Factions_ADA";
 			name="3CB Factions - ADA";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item51
+		class Item50
 		{
 			className="CUP_CABuildings2_A_Pub";
 			name="CUP_CABuildings2_A_Pub";
 		};
-		class Item52
+		class Item51
 		{
 			className="A3_Structures_F_Households";
 			name="Arma 3 - Houses";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item53
+		class Item52
 		{
 			className="CUP_CAStructures_E_HouseK";
 			name="CUP_CAStructures_E_HouseK";
 		};
-		class Item54
+		class Item53
 		{
 			className="CUP_CAStructures_E_HouseC";
 			name="CUP_CAStructures_E_HouseC";
 		};
-		class Item55
+		class Item54
 		{
 			className="A3_Structures_F_Enoch_Civilian";
 			name="Arma 3 Contact Platform - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item56
+		class Item55
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item57
+		class Item56
 		{
 			className="A3_Structures_F_Orange";
 			name="Arma 3 Orange - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item58
+		class Item57
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item59
+		class Item58
 		{
 			className="A3_Structures_F_Tank";
 			name="Arma 3 Tank - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item60
+		class Item59
 		{
 			className="A3_Rocks_F";
 			name="Arma 3 - Rocks and Stones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item61
+		class Item60
 		{
 			className="Bro_MSW_Base";
 			name="Modular Shoothouse [Bromine]";
 			author="Bromine";
 		};
-		class Item62
+		class Item61
 		{
 			className="CUP_CAStructures_E_HouseL";
 			name="CUP_CAStructures_E_HouseL";
 		};
-		class Item63
+		class Item62
 		{
 			className="CUP_CAStructures_E_Misc_Misc_Market";
 			name="CUP_CAStructures_E_Misc_Misc_Market";
 		};
-		class Item64
+		class Item63
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item65
+		class Item64
 		{
 			className="CUP_Buildings_Config";
 			name="CUP_Buildings_Config";
 		};
-		class Item66
+		class Item65
 		{
 			className="Bro_Structures";
 			name="[Bro] Milsim Structures";
 			author="Bromine";
 			url="https://steamcommunity.com/id/Brominum/myworkshopfiles/?appid=107410";
 		};
-		class Item67
+		class Item66
 		{
 			className="CUP_Editor_A1_Roads_Config";
 			name="CUP_Editor_A1_Roads_Config";
 		};
-		class Item68
+		class Item67
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item69
+		class Item68
 		{
 			className="A3_Props_F_Argo";
 			name="Arma 3 Malden - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item70
+		class Item69
 		{
 			className="A3_Structures_F_Enoch_Military";
 			name="Arma 3 Contact Platform - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item71
+		class Item70
 		{
 			className="A3_Structures_F_Enoch_Infrastructure";
 			name="Arma 3 Contact Platform - Infrastructure Objects";
@@ -630,9 +622,9 @@ dlcs[]=
 	"RHS_USAF",
 	"Expansion",
 	"Enoch",
-	"UK3CB_Factions",
 	"Argo",
 	"RHS_AFRF",
+	"UK3CB_Factions",
 	"ORANGE",
 	"Heli",
 	"Tank"
@@ -18744,6 +18736,7 @@ class Mission
 		{
 			dataType="Layer";
 			name="Framework Playable & Others";
+			state=1;
 			class Entities
 			{
 				items=19;
@@ -18998,9 +18991,11 @@ class Mission
 									{
 									};
 									id=21418;
+									atlOffset=185.97;
 								};
 							};
 							id=406;
+							atlOffset=185.97;
 						};
 						class Item1
 						{
@@ -19083,7 +19078,7 @@ class Mission
 									{
 									};
 									id=21421;
-									atlOffset=4.7683716e-07;
+									atlOffset=185.97;
 								};
 								class Item1
 								{
@@ -19267,7 +19262,7 @@ class Mission
 									{
 									};
 									id=21424;
-									atlOffset=4.7683716e-07;
+									atlOffset=185.97;
 								};
 								class Item2
 								{
@@ -19408,7 +19403,7 @@ class Mission
 									{
 									};
 									id=21430;
-									atlOffset=4.7683716e-07;
+									atlOffset=185.97;
 								};
 								class Item3
 								{
@@ -19578,11 +19573,11 @@ class Mission
 									{
 									};
 									id=21436;
-									atlOffset=4.7683716e-07;
+									atlOffset=185.97;
 								};
 							};
 							id=407;
-							atlOffset=4.7683716e-07;
+							atlOffset=185.97;
 						};
 						class Item2
 						{
@@ -19693,7 +19688,7 @@ class Mission
 									{
 									};
 									id=21440;
-									atlOffset=4.7683716e-07;
+									atlOffset=185.97;
 								};
 								class Item1
 								{
@@ -19897,7 +19892,7 @@ class Mission
 									{
 									};
 									id=21443;
-									atlOffset=4.7683716e-07;
+									atlOffset=185.97;
 								};
 								class Item2
 								{
@@ -20101,7 +20096,7 @@ class Mission
 									{
 									};
 									id=21449;
-									atlOffset=4.7683716e-07;
+									atlOffset=185.97;
 								};
 								class Item3
 								{
@@ -20268,11 +20263,11 @@ class Mission
 									{
 									};
 									id=21455;
-									atlOffset=4.7683716e-07;
+									atlOffset=185.97;
 								};
 							};
 							id=408;
-							atlOffset=4.7683716e-07;
+							atlOffset=185.97;
 						};
 						class Item3
 						{
@@ -20344,7 +20339,7 @@ class Mission
 									{
 									};
 									id=21459;
-									atlOffset=5.531311e-05;
+									atlOffset=185.97;
 								};
 								class Item1
 								{
@@ -20395,7 +20390,7 @@ class Mission
 									{
 									};
 									id=21461;
-									atlOffset=1.1444092e-05;
+									atlOffset=185.97;
 								};
 								class Item2
 								{
@@ -20445,6 +20440,7 @@ class Mission
 									{
 									};
 									id=21463;
+									atlOffset=185.97;
 								};
 								class Item3
 								{
@@ -20495,7 +20491,7 @@ class Mission
 									{
 									};
 									id=21465;
-									atlOffset=1.9073486e-06;
+									atlOffset=185.97;
 								};
 								class Item4
 								{
@@ -20545,6 +20541,7 @@ class Mission
 									{
 									};
 									id=21467;
+									atlOffset=185.97;
 								};
 								class Item5
 								{
@@ -20595,11 +20592,11 @@ class Mission
 									{
 									};
 									id=21469;
-									atlOffset=1.9073486e-06;
+									atlOffset=185.97;
 								};
 							};
 							id=409;
-							atlOffset=-0.00068855286;
+							atlOffset=185.97;
 						};
 						class Item4
 						{
@@ -20627,7 +20624,7 @@ class Mission
 						};
 					};
 					id=403;
-					atlOffset=2971695.5;
+					atlOffset=2971857.8;
 				};
 				class Item1
 				{
@@ -22249,788 +22246,8 @@ class Mission
 				{
 					dataType="Layer";
 					name="AI Parade Unit";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Group";
-							side="West";
-							class Entities
-							{
-								items=15;
-								class Item0
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24538.281,3.1914382,19068.965};
-										angles[]={0,2.2379913,0};
-									};
-									side="West";
-									flags=5;
-									class Attributes
-									{
-										init="this forceFlagTexture ""\A3\Data_F\Flags\flag_uk_CO.paa"";";
-										presenceCondition="false";
-									};
-									id=10294;
-									type="B_Soldier_F";
-									atlOffset=-7.1525574e-07;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item1
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24538.416,3.1914382,19066.645};
-										angles[]={0,2.1794515,0};
-									};
-									side="West";
-									flags=5;
-									class Attributes
-									{
-										init="this forceFlagTexture ""\A3\Ui_f\data\Map\Markers\Flags\germany_ca.paa"";";
-										presenceCondition="false";
-									};
-									id=10291;
-									type="UK3CB_CW_US_B_LATE_OFF";
-									atlOffset=-7.1525574e-07;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item2
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24537.127,3.1919265,19064.742};
-										angles[]={0,2.1343431,0};
-									};
-									side="West";
-									flags=5;
-									class Attributes
-									{
-										init="this forceFlagTexture ""flags\scotland.jpg"";";
-										presenceCondition="false";
-									};
-									id=10293;
-									type="UK3CB_CW_US_B_LATE_OFF";
-									atlOffset=0.00048756599;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item3
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24537.57,3.1914382,19068.094};
-										angles[]={0,2.3118885,0};
-									};
-									side="West";
-									flags=5;
-									class Attributes
-									{
-										init="this forceFlagTexture ""\A3\Data_F\Flags\flag_uk_CO.paa"";";
-										presenceCondition="false";
-									};
-									id=10296;
-									type="B_Soldier_F";
-									atlOffset=-7.1525574e-07;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item4
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24536.936,3.1914382,19067.152};
-										angles[]={0,2.3118885,0};
-									};
-									side="West";
-									flags=5;
-									class Attributes
-									{
-										init="this forceFlagTexture ""flags\norway.jpg"";";
-										presenceCondition="false";
-									};
-									id=10298;
-									type="B_Soldier_F";
-									atlOffset=-7.1525574e-07;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item5
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24535.857,3.1914382,19065.543};
-										angles[]={0,2.3118956,0};
-									};
-									side="West";
-									flags=5;
-									class Attributes
-									{
-										init="this forceFlagTexture ""flags\israel.jpg"";";
-										presenceCondition="false";
-									};
-									id=10302;
-									type="B_Soldier_F";
-									atlOffset=-7.1525574e-07;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item6
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24534.115,3.1914382,19062.859};
-										angles[]={0,2.1301997,0};
-									};
-									side="West";
-									flags=5;
-									class Attributes
-									{
-										init="this forceFlagTexture ""flags\turkey.jpg"";";
-										presenceCondition="false";
-									};
-									id=10311;
-									type="B_Soldier_F";
-									atlOffset=-7.1525574e-07;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item7
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24536.375,3.1914382,19066.348};
-										angles[]={0,2.2928643,0};
-									};
-									side="West";
-									flags=5;
-									class Attributes
-									{
-										init="this forceFlagTexture ""flags\latvia.jpg"";";
-										presenceCondition="false";
-									};
-									id=10318;
-									type="B_Soldier_F";
-									atlOffset=-7.1525574e-07;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item8
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24535.264,3.1914382,19064.578};
-										angles[]={0,2.2332439,0};
-									};
-									side="West";
-									flags=5;
-									class Attributes
-									{
-										init="this forceFlagTexture ""flags\hungary.jpg""";
-										presenceCondition="false";
-									};
-									id=10329;
-									type="B_Soldier_F";
-									atlOffset=-7.1525574e-07;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item9
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24539.041,3.1914382,19067.602};
-										angles[]={0,2.2151892,0};
-									};
-									side="West";
-									flags=4;
-									class Attributes
-									{
-										init="this forceFlagTexture ""flags\finland.jpg"";";
-										presenceCondition="false";
-									};
-									id=10379;
-									type="B_Soldier_SL_F";
-									atlOffset=-7.1525574e-07;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item10
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24536.373,3.1914382,19063.902};
-										angles[]={0,2.0283248,0};
-									};
-									side="West";
-									flags=4;
-									class Attributes
-									{
-										init="this forceFlagTexture ""\A3\Data_F\Flags\flag_uk_CO.paa""";
-										presenceCondition="false";
-									};
-									id=10380;
-									type="B_Soldier_SL_F";
-									atlOffset=-7.1525574e-07;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item11
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24535.689,3.1919265,19062.871};
-										angles[]={0,2.2465029,0};
-									};
-									side="West";
-									flags=4;
-									class Attributes
-									{
-										init="this forceFlagTexture ""\A3\Ui_f\data\Map\Markers\Flags\slovakia_ca.paa""";
-										presenceCondition="false";
-									};
-									id=10381;
-									type="B_Soldier_SL_F";
-									atlOffset=0.00048756599;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item12
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24534.709,3.1914382,19063.723};
-										angles[]={0,2.2332439,0};
-									};
-									side="West";
-									flags=5;
-									class Attributes
-									{
-										init="this forceFlagTexture ""flags\italy.jpg""";
-										presenceCondition="false";
-									};
-									id=10377;
-									type="B_Soldier_F";
-									atlOffset=-7.1525574e-07;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item13
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24537.721,3.1914382,19065.625};
-										angles[]={0,2.2428355,0};
-									};
-									side="West";
-									flags=6;
-									class Attributes
-									{
-										init="{_X disableAI ""ALL"";_x setVariable [""BIS_noCoreConversations"", true]; removeAllWeapons _X} forEach units group this; this forceFlagTexture ""flags\sweden.jpg"";" \n "" \n "{_X playAction ""Salute""; _X setBehaviour ""CARELESS""; _X disableAI ""ALL""; _X lookAt Player; _X setVariable [""acex_headless_blacklist"",true,true]} foreach units group parade;";
-										name="parade";
-										presenceCondition="false";
-									};
-									id=10569;
-									type="UK3CB_CW_US_B_LATE_OFF";
-									atlOffset=-7.1525574e-07;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="uk3cb_enable_loadout";
-											expression="if !(_value) then { _this call uk3cb_factions_common_fnc_disable_loadout; };";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="uk3cb_enable_randomisation";
-											expression="if !(_value) then { _this call uk3cb_factions_common_fnc_disable_randomize; };";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=0;
-												};
-											};
-										};
-										class Attribute3
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										nAttributes=4;
-									};
-								};
-								class Item14
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={24539.441,3.1914382,19069.18};
-										angles[]={0,2.3118956,0};
-									};
-									side="West";
-									flags=5;
-									class Attributes
-									{
-										init="this forceFlagTexture ""flags\israel.jpg"";";
-										presenceCondition="false";
-									};
-									id=10573;
-									type="B_Soldier_F";
-									atlOffset=-7.1525574e-07;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="GW_TeamColor";
-											expression="_this setVariable ['GW_Common_GroupColor', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="main";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="GW_LoadoutSelector";
-											expression="_this setVariable ['GW_Gear_Loadout', _value, true];";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-							};
-							class Attributes
-							{
-							};
-							id=10288;
-							atlOffset=-7.1525574e-07;
-						};
-					};
 					id=10519;
-					atlOffset=-7.1525574e-07;
+					atlOffset=185.97;
 				};
 				class Item18
 				{
@@ -23052,7 +22269,7 @@ class Mission
 				};
 			};
 			id=402;
-			atlOffset=-0.3950901;
+			atlOffset=6.2552071;
 		};
 		class Item1
 		{
@@ -39034,7 +38251,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={12597.061,1.2079651,14165.571};
+								position[]={12597.061,1.2079654,14165.571};
 								angles[]={6.09478,1.167799,6.161129};
 							};
 							side="Empty";
@@ -39044,14 +38261,14 @@ class Mission
 							};
 							id=18044;
 							type="Land_Razorwire_F";
-							atlOffset=2.4616718e-05;
+							atlOffset=2.4825335e-05;
 						};
 						class Item11
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={12598.207,1.1387626,14165.945};
+								position[]={12598.207,1.1387628,14165.945};
 								angles[]={6.09478,1.167799,6.161129};
 							};
 							side="Empty";
@@ -39061,14 +38278,14 @@ class Mission
 							};
 							id=18045;
 							type="Land_Razorwire_F";
-							atlOffset=3.2246113e-05;
+							atlOffset=3.2454729e-05;
 						};
 						class Item12
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={12599.932,-0.071677208,14158.626};
+								position[]={12599.932,-0.07167697,14158.626};
 								angles[]={0,1.167799,0};
 							};
 							side="Empty";
@@ -39077,14 +38294,14 @@ class Mission
 							};
 							id=18046;
 							type="Land_Razorwire_F";
-							atlOffset=0.28115869;
+							atlOffset=0.28115892;
 						};
 						class Item13
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={12601.078,-0.071339965,14159};
+								position[]={12601.078,-0.071339726,14159};
 								angles[]={0,1.167799,0};
 							};
 							side="Empty";
@@ -39093,14 +38310,14 @@ class Mission
 							};
 							id=18047;
 							type="Land_Razorwire_F";
-							atlOffset=0.28116632;
+							atlOffset=0.28116655;
 						};
 						class Item14
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={12603.243,-0.78649282,14151.375};
+								position[]={12603.243,-0.78649259,14151.375};
 								angles[]={0,1.167799,0};
 							};
 							side="Empty";
@@ -39109,14 +38326,14 @@ class Mission
 							};
 							id=18048;
 							type="Land_Razorwire_F";
-							atlOffset=0.34843409;
+							atlOffset=0.34843433;
 						};
 						class Item15
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={12604.39,-0.79698932,14151.749};
+								position[]={12604.39,-0.79698908,14151.749};
 								angles[]={0,1.167799,0};
 							};
 							side="Empty";
@@ -39125,7 +38342,7 @@ class Mission
 							};
 							id=18049;
 							type="Land_Razorwire_F";
-							atlOffset=0.34844172;
+							atlOffset=0.34844196;
 						};
 						class Item16
 						{
@@ -39299,7 +38516,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={12660.335,1.8376294,14188.943};
+								position[]={12660.335,1.8376297,14188.943};
 								angles[]={6.137557,0.69613642,0.25436813};
 							};
 							side="Empty";
@@ -39309,7 +38526,7 @@ class Mission
 							};
 							id=18060;
 							type="Land_Razorwire_F";
-							atlOffset=2.4557114e-05;
+							atlOffset=2.4795532e-05;
 						};
 						class Item27
 						{
@@ -39326,6 +38543,7 @@ class Mission
 							};
 							id=18061;
 							type="Land_Razorwire_F";
+							atlOffset=1.1920929e-07;
 						};
 						class Item28
 						{
@@ -39342,7 +38560,7 @@ class Mission
 							};
 							id=18062;
 							type="Land_Razorwire_F";
-							atlOffset=3.5762787e-07;
+							atlOffset=4.7683716e-07;
 						};
 						class Item29
 						{
@@ -39359,7 +38577,7 @@ class Mission
 							};
 							id=18063;
 							type="Land_Razorwire_F";
-							atlOffset=2.3841858e-07;
+							atlOffset=3.5762787e-07;
 						};
 						class Item30
 						{
@@ -39522,7 +38740,7 @@ class Mission
 							};
 							id=18075;
 							type="Land_HBarrier_Big_F";
-							atlOffset=2.3841858e-07;
+							atlOffset=3.5762787e-07;
 						};
 						class Item40
 						{
@@ -39545,7 +38763,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={12602.352,1.6286147,14168.61};
+								position[]={12602.352,1.6286149,14168.61};
 								angles[]={6.105093,1.0854346,6.1808777};
 							};
 							side="Empty";
@@ -39555,14 +38773,14 @@ class Mission
 							};
 							id=18077;
 							type="Land_HBarrier_Big_F";
-							atlOffset=2.4557114e-05;
+							atlOffset=2.476573e-05;
 						};
 						class Item42
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={12606.245,0.00023829937,14162.179};
+								position[]={12606.245,0.00023853779,14162.179};
 								angles[]={6.0922084,1.0854346,6.1808772};
 							};
 							side="Empty";
@@ -39572,7 +38790,7 @@ class Mission
 							};
 							id=18078;
 							type="Land_HBarrier_Big_F";
-							atlOffset=2.4557114e-05;
+							atlOffset=2.4795532e-05;
 						};
 						class Item43
 						{
@@ -39589,7 +38807,7 @@ class Mission
 							};
 							id=18079;
 							type="Land_HBarrier_Big_F";
-							atlOffset=0.029852748;
+							atlOffset=0.029852867;
 						};
 						class Item44
 						{
@@ -39606,7 +38824,7 @@ class Mission
 							};
 							id=18080;
 							type="Land_HBarrier_Big_F";
-							atlOffset=-0.30811095;
+							atlOffset=-0.30811083;
 						};
 						class Item45
 						{
@@ -39623,7 +38841,7 @@ class Mission
 							};
 							id=18081;
 							type="Land_HBarrier_Big_F";
-							atlOffset=-1.9576411;
+							atlOffset=-1.957641;
 						};
 						class Item46
 						{
@@ -44615,7 +43833,7 @@ class Mission
 									};
 									id=8055;
 									type="TargetP_Inf8_F";
-									atlOffset=7.1525574e-07;
+									atlOffset=9.5367432e-07;
 								};
 								class Item18
 								{
@@ -62029,7 +61247,7 @@ class Mission
 									};
 									id=9337;
 									type="Land_House_K_6_EP1";
-									atlOffset=-0.60811543;
+									atlOffset=-0.6081152;
 								};
 								class Item5
 								{
@@ -62135,7 +61353,7 @@ class Mission
 									};
 									id=9345;
 									type="Land_GH_House_1_F";
-									atlOffset=-0.54342866;
+									atlOffset=-0.54342842;
 								};
 								class Item11
 								{
@@ -66037,7 +65255,7 @@ class Mission
 									};
 									id=11214;
 									type="TargetP_Inf4_F";
-									atlOffset=0.6612494;
+									atlOffset=0.66124964;
 								};
 								class Item3
 								{
@@ -67326,7 +66544,7 @@ class Mission
 									};
 									id=15622;
 									type="TargetP_Inf4_F";
-									atlOffset=0.29129386;
+									atlOffset=0.2912941;
 								};
 								class Item47
 								{
@@ -68587,7 +67805,7 @@ class Mission
 									};
 									id=11231;
 									type="TargetP_Inf4_F";
-									atlOffset=2.3841858e-07;
+									atlOffset=4.7683716e-07;
 								};
 								class Item9
 								{
@@ -68605,6 +67823,7 @@ class Mission
 									};
 									id=11232;
 									type="TargetP_Inf4_F";
+									atlOffset=2.3841858e-07;
 								};
 								class Item10
 								{
@@ -68711,7 +67930,7 @@ class Mission
 									};
 									id=15626;
 									type="TargetP_Inf4_F";
-									atlOffset=0.0072767735;
+									atlOffset=0.0072770119;
 								};
 								class Item16
 								{
@@ -107014,7 +106233,7 @@ class Mission
 									};
 									id=18144;
 									type="Land_Billboard_F";
-									atlOffset=-1.2606977;
+									atlOffset=-1.2606976;
 								};
 								class Item2
 								{
@@ -108082,7 +107301,7 @@ class Mission
 									fillName="SolidFull";
 									a=2;
 									b=83.283951;
-									angle=28.606035;
+									angle=28.606031;
 									id=19579;
 								};
 								class Item4
@@ -108095,7 +107314,7 @@ class Mission
 									fillName="SolidFull";
 									a=2;
 									b=83.779327;
-									angle=28.606033;
+									angle=28.60603;
 									id=19580;
 								};
 								class Item5
@@ -108108,7 +107327,7 @@ class Mission
 									fillName="SolidFull";
 									a=2;
 									b=83.745834;
-									angle=28.606031;
+									angle=28.606028;
 									id=19581;
 								};
 								class Item6
@@ -108160,7 +107379,7 @@ class Mission
 									fillName="SolidFull";
 									a=2;
 									b=7;
-									angle=228.89441;
+									angle=228.89438;
 									id=19585;
 								};
 								class Item10
@@ -113769,7 +112988,7 @@ class Mission
 													};
 													id=20114;
 													type="Land_Unfinished_Building_02_F";
-													atlOffset=0.50389862;
+													atlOffset=0.50389886;
 												};
 												class Item62
 												{
@@ -113786,7 +113005,7 @@ class Mission
 													};
 													id=20115;
 													type="Land_Unfinished_Building_02_F";
-													atlOffset=-0.97850013;
+													atlOffset=-0.97849989;
 												};
 												class Item63
 												{
@@ -113820,7 +113039,7 @@ class Mission
 													};
 													id=20117;
 													type="Land_Unfinished_Building_02_F";
-													atlOffset=-1.0139792;
+													atlOffset=-1.013979;
 												};
 												class Item65
 												{
