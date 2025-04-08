@@ -112,6 +112,8 @@ if (_isMan) then {
 		case "aa": { _DisplayName = "Anti-Air"; _roleArray pushBack _DisplayName};
 		case "ahat": { _DisplayName = "Asst. Heavy AT"; _roleArray pushBack _DisplayName};
 		case "hat": { _DisplayName = "Heavy AT"; _roleArray pushBack _DisplayName};
+		case "amat": { _DisplayName = "Asst. Heavy AT"; _roleArray pushBack _DisplayName};
+		case "mat": { _DisplayName = "Heavy AT"; _roleArray pushBack _DisplayName};		
 		case "p": { _DisplayName = "Chopper Pilot"; _roleArray pushBack _DisplayName};
 		case "pj": { _DisplayName = "Para-Rescueman"; _roleArray pushBack _DisplayName};
 		case "jetp": { _DisplayName = "Jet Pilot"; _roleArray pushBack _DisplayName};
@@ -193,15 +195,20 @@ if (_isMan) then {
 		_unit setUnitLoadout _loadout;
 
 		if (_isPlayer && _useFactionRadio && _roleUseRadio) then {
-			if(!isNil "_insignia") then {
-				[_unit,_insignia] call BIS_fnc_setUnitInsignia;
-			};
+
 			if (isClass ((missionConfigFile >> "GW_Modules" >> "Radios"))) then {
 				[{
 					_this call EFUNC(Radios,add);
 				}, [_unit, _role], 0.1] call CBA_fnc_waitAndExecute;
 			};
 		};
+		if(!isNil "_insignia") then {
+			if(_insignia isEqualTo "" && _isPlayer) then {
+				[_unit,"GOL_Insignia_Hellfish"] call BIS_fnc_setUnitInsignia;
+			} else {
+				[_unit,_insignia] call BIS_fnc_setUnitInsignia;
+			}
+		};		
 
 		if (isMultiplayer || isDedicated) then
 		{
