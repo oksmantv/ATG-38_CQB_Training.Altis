@@ -1,10 +1,6 @@
 Params ["_Object","_CourseNumber","_ZoneTrigger"];
 
-If(!isServer) exitWith { false };
-
-[_Object,
-[
-	"<t color='#32ec08'>Start Dry-Run</t>",	// title
+_Object addAction ["<t color='#32ec08'>Start Dry-Run</t>",	// title
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"]; // script
 		_arguments params ["_CourseNumber","_ZoneTrigger"];
@@ -32,11 +28,9 @@ If(!isServer) exitWith { false };
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
-]] remoteExec ["addAction",0];
+];
 
-[_Object,
-[
-	"<t color='#32ec08'>Start Live-Run (1)</t>",	// title
+_Object addAction ["<t color='#32ec08'>Start Live-Run (1)</t>",	// title
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"]; // script
 		_arguments params ["_CourseNumber","_ZoneTrigger"];
@@ -62,11 +56,9 @@ If(!isServer) exitWith { false };
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
-]] remoteExec ["addAction",0];
+];
 
-[_Object,
-[
-	"<t color='#32ec08'>Start Live-Run (2)</t>",	// title
+_Object addAction ["<t color='#32ec08'>Start Live-Run (2)</t>",	// title
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"]; // script
 		_arguments params ["_CourseNumber","_ZoneTrigger"];
@@ -93,5 +85,5 @@ If(!isServer) exitWith { false };
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
-]] remoteExec ["addAction",0];
+];
 

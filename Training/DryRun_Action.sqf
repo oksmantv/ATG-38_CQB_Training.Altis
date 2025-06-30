@@ -181,3 +181,119 @@ Terminal_6 AddAction ["<t color='#FFA500'>Activate Live Run (Hostage)</t>",{
 	[House_6_T1,House_6_T2,House_6_T3,House_6_T4,House_6_T5],
 	4
 ],1,true,true,"","_target distance _this < 4"];
+
+// House 7
+Terminal_7 AddAction ["<t color='#26FF88'>Activate Dry Run</t>",{
+    (_this select 3) Params ["_Trigger","_Targets"];
+    [(_this select 0),(_this select 1),_Trigger,_Targets] remoteExec ["DryRunCode",2];
+},
+[
+    House_7_Trigger,
+    [House_7_T1,House_7_T2,House_7_T3,House_7_T4,House_7_T5]
+],1,true,true,"","_target distance _this < 4"];
+Terminal_7 AddAction ["<t color='#FF0000'>Activate Live Run</t>",{
+    (_this select 3) Params ["_Trigger","_Targets","_RandomCount"];
+    [(_this select 0),(_this select 1),_Trigger,_Targets,_RandomCount] remoteExec ["LiveRunCode",2];
+},
+[
+    House_7_Trigger,
+    [House_7_T1,House_7_T2,House_7_T3,House_7_T4,House_7_T5],
+    3
+],1,true,true,"","_target distance _this < 4"];
+
+Terminal_7 AddAction ["<t color='#FFA500'>Activate Live Run (Hostage)</t>",{
+    (_this select 3) Params ["_Trigger","_Targets","_RandomCount"];
+    [(_this select 0),(_this select 1),_Trigger,_Targets,_RandomCount,true,true] remoteExec ["LiveRunCode",2];
+},
+[
+    House_7_Trigger,
+    [House_7_T1,House_7_T2,House_7_T3,House_7_T4,House_7_T5],
+    4
+],1,true,true,"","_target distance _this < 4"];
+
+// House 8
+Terminal_8 AddAction ["<t color='#26FF88'>Activate Dry Run</t>",{
+    (_this select 3) Params ["_Trigger","_Targets"];
+    [(_this select 0),(_this select 1),_Trigger,_Targets] remoteExec ["DryRunCode",2];
+},
+[
+    House_8_Trigger,
+    [House_8_T1,House_8_T2,House_8_T3,House_8_T4,House_8_T5]
+],1,true,true,"","_target distance _this < 4"];
+Terminal_8 AddAction ["<t color='#FF0000'>Activate Live Run</t>",{
+    (_this select 3) Params ["_Trigger","_Targets","_RandomCount"];
+    [(_this select 0),(_this select 1),_Trigger,_Targets,_RandomCount] remoteExec ["LiveRunCode",2];
+},
+[
+    House_8_Trigger,
+    [House_8_T1,House_8_T2,House_8_T3,House_8_T4,House_8_T5],
+    3
+],1,true,true,"","_target distance _this < 4"];
+
+Terminal_8 AddAction ["<t color='#FFA500'>Activate Live Run (Hostage)</t>",{
+    (_this select 3) Params ["_Trigger","_Targets","_RandomCount"];
+    [(_this select 0),(_this select 1),_Trigger,_Targets,_RandomCount,true,true] remoteExec ["LiveRunCode",2];
+},
+[
+    House_8_Trigger,
+    [House_8_T1,House_8_T2,House_8_T3,House_8_T4,House_8_T5],
+    4
+],1,true,true,"","_target distance _this < 4"];
+
+// House 9
+Terminal_9 AddAction ["<t color='#26FF88'>Activate Dry Run</t>",{
+    (_this select 3) Params ["_Trigger","_Targets"];
+    [(_this select 0),(_this select 1),_Trigger,_Targets] remoteExec ["DryRunCode",2];
+},
+[
+    House_9_Trigger,
+    [House_9_T1,House_9_T2,House_9_T3,House_9_T4,House_9_T5]
+],1,true,true,"","_target distance _this < 4"];
+Terminal_9 AddAction ["<t color='#FF0000'>Activate Live Run</t>",{
+    (_this select 3) Params ["_Trigger","_Targets","_RandomCount"];
+    [(_this select 0),(_this select 1),_Trigger,_Targets,_RandomCount] remoteExec ["LiveRunCode",2];
+},
+[
+    House_9_Trigger,
+    [House_9_T1,House_9_T2,House_9_T3,House_9_T4,House_9_T5],
+    3
+],1,true,true,"","_target distance _this < 4"];
+
+Terminal_9 AddAction ["<t color='#FFA500'>Activate Live Run (Hostage)</t>",{
+    (_this select 3) Params ["_Trigger","_Targets","_RandomCount"];
+    [(_this select 0),(_this select 1),_Trigger,_Targets,_RandomCount,true,true] remoteExec ["LiveRunCode",2];
+},
+[
+    House_9_Trigger,
+    [House_9_T1,House_9_T2,House_9_T3,House_9_T4,House_9_T5],
+    4
+],1,true,true,"","_target distance _this < 4"];
+
+// House 10
+Terminal_10 AddAction ["<t color='#26FF88'>Activate Dry Run</t>",{
+    (_this select 3) Params ["_Trigger","_Targets"];
+    [(_this select 0),(_this select 1),_Trigger,_Targets] remoteExec ["DryRunCode",2];
+},
+[
+    House_10_Trigger,
+    [House_10_T1,House_10_T2,House_10_T3,House_10_T4,House_10_T5]
+],1,true,true,"","_target distance _this < 4"];
+Terminal_10 AddAction ["<t color='#FF0000'>Activate Live Run</t>",{
+    (_this select 3) Params ["_Trigger","_Targets","_RandomCount"];
+    [(_this select 0),(_this select 1),_Trigger,_Targets,_RandomCount] remoteExec ["LiveRunCode",2];
+},
+[
+    House_10_Trigger,
+    [House_10_T1,House_10_T2,House_10_T3,House_10_T4,House_10_T5],
+    3
+],1,true,true,"","_target distance _this < 4"];
+
+Terminal_10 AddAction ["<t color='#FFA500'>Activate Live Run (Hostage)</t>",{
+    (_this select 3) Params ["_Trigger","_Targets","_RandomCount"];
+    [(_this select 0),(_this select 1),_Trigger,_Targets,_RandomCount,true,true] remoteExec ["LiveRunCode",2];
+},
+[
+    House_10_Trigger,
+    [House_10_T1,House_10_T2,House_10_T3,House_10_T4,House_10_T5],
+    4
+],1,true,true,"","_target distance _this < 4"];

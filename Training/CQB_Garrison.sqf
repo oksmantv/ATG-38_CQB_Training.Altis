@@ -165,7 +165,7 @@
 
 
 		sleep (0.8*_NumberInfantry);
-		_Flag setObjectTextureGlobal [0,"image\notready.jpg"];
+		_Flag setObjectTextureGlobal [0,"images\notready.jpg"];
 		//[_Flag,"activated.wav"] remoteExec ["OKS_PlaySound",0];
 		playSound3D [MISSION_ROOT + "activated.wav", _Flag, false, _Flag, 5, 1, 25];
 		[_Flag,0] call BIS_fnc_dataTerminalAnimate;

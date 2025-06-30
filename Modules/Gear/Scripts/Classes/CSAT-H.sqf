@@ -58,7 +58,7 @@ if (_role isEqualTo "jetp") then {
 // Attachments
 _silencer = "rhs_acc_uuk";
 _pointer = "acc_flashlight";
-_sight = "JCA_optic_ARO_black";
+_sight = "rhsusf_acc_su230";
 _bipod = "rhs_acc_grip_rk2";
 
 _rifle = ["rhs_weap_ak74mr", _silencer, _pointer, _sight, _bipod];
@@ -82,9 +82,9 @@ _MMG_mag = "UK3CB_M60_100rnd_762x51_YT";
 
 _sight = "";
 
-_LAT = ["UK3CB_BAF_AT4_CS_AT_Launcher", _silencer, _pointer, _sight, _bipod];
-_LAT_mag = "UK3CB_BAF_AT4_CS_AT_Mag";
-_LAT_ReUsable = true;
+_LAT = ["rhs_weap_rpg26", _silencer, _pointer, _sight, _bipod];
+_LAT_mag = "rhs_rpg26_mag";
+_LAT_ReUsable = false;
 
 _MAT = ["rhs_weap_maaws", _silencer, _pointer, _sight, _bipod];
 _MAT_mag = "MRAWS_HEAT_F";
@@ -104,9 +104,9 @@ _pdw_mag = "rhs_mag_9x19mm_7n31_44";
 
 _silencer = "";
 _pointer = "";
-_sight = "optic_LRPS";
-_bipod = "bipod_02_F_hex";
+_sight = "rhs_acc_pso1m21";
+_bipod = "";
 
-_rifleMarksman = ["srifle_DMR_05_hex_F", _silencer, _pointer, _sight, _bipod];
-_rifleMarksman_mag = "10Rnd_93x64_DMR_05_Mag";
-_rifleMarksman_mag_tr = "10Rnd_93x64_DMR_05_Mag";
+_rifleMarksman = ["rhs_weap_svdp_wd_npz", _silencer, _pointer, _sight, _bipod];
+_rifleMarksman_mag = "UK3CB_SVD_10rnd_762x54_GT";
+_rifleMarksman_mag_tr = "UK3CB_SVD_10rnd_762x54_GT";

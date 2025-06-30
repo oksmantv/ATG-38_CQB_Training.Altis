@@ -2,7 +2,7 @@ _useMineDetector = false;
 _allowedNightStuff = false;
 
 _insignia = "Roundel_Czech";
-_goggles = selectRandom [""];
+_goggles = selectRandom ["G_Armband_darred_alt_F"];
 _helmet = selectRandom ["rhs_ssh60"];
 _OfficerHelmet = "rhssaf_beret_red";
 _uniform = selectRandom ["rhs_uniform_afghanka_grey"];
@@ -60,7 +60,6 @@ _rifle = ["rhs_weap_savz58p", _silencer, _pointer, _sight, _bipod];
 _rifleC = ["rhs_weap_savz58v", _silencer, _pointer, _sight, _bipod];
 _rifleGL = ["rhs_weap_savz58p", _silencer, _pointer, _sight, _bipod];
 _rifleL = ["UK3CB_SVD_OLD", _silencer, _pointer, "rhs_acc_pso1m2", _bipod];
-_rifleMarksman = ["UK3CB_SVD_OLD", _silencer, _pointer, "rhs_acc_pso1m2", _bipod];
 _rifle_mag = "rhs_30Rnd_762x39mm_Savz58";
 _rifle_mag_tr = "rhs_30Rnd_762x39mm_Savz58_tracer";
 
@@ -70,16 +69,12 @@ _rifleGL_mag = "rhs_30Rnd_762x39mm_Savz58";
 _rifleGL_mag_tr = "rhs_30Rnd_762x39mm_Savz58_tracer";
 _rifleL_mag = "10Rnd_762x54_Mag";
 _rifleL_mag_tr = "ACE_10Rnd_762x54_Tracer_mag";
-_rifleMarksman_mag = "10Rnd_762x54_Mag";
-_rifleMarksman_mag_tr = "ACE_10Rnd_762x54_Tracer_mag";
 
-_LMG = ["Hud_UK59_F", _silencer, _pointer, _sight, _bipod];
-_LMG_mag = "100Rnd_762x54_Tracer";
-_LMG_mag_tr = "100Rnd_762x54_Tracer";
+_LMG = ["UK3CB_RPD", _silencer, _pointer, _sight, _bipod];
+_LMG_mag = "UK3CB_RPD_100rnd_762x39_GT";
 
-_MMG = ["Hud_UK59_F", _silencer, _pointer, _sight, _bipod];
-_MMG_mag = "100Rnd_762x54_Tracer";
-_MMG_mag_tr = "100Rnd_762x54_Tracer";
+_MMG = ["UK3CB_RPD", _silencer, _pointer, _sight, _bipod];
+_MMG_mag = "UK3CB_RPD_100rnd_762x39_GT";
 
 // Launchers
 _silencer = "";
@@ -109,3 +104,12 @@ _pistol_mag = "rhs_mag_762x25_8";
 _pdw = ["rhs_weap_savz61", _silencer, _pointer, _sight, _bipod];
 _pdw_mag = "rhsgref_20rnd_765x17_vz61";
 _pdw_mag_tr = "rhsgref_20rnd_765x17_vz61";
+
+_silencer = "";
+_pointer = "";
+_sight = "rhs_acc_pso1m21";
+_bipod = "";
+
+_rifleMarksman = ["UK3CB_SVD_OLD", _silencer, _pointer, _sight, _bipod];
+_rifleMarksman_mag = "UK3CB_SVD_10rnd_762x54_GT";
+_rifleMarksman_mag_tr = "UK3CB_SVD_10rnd_762x54_GT4";

@@ -1,4 +1,4 @@
-// *	DO NOT CHANCE THE ORDER/STRUCTIOR OF THE FILE
+﻿// *	DO NOT CHANCE THE ORDER/STRUCTIOR OF THE FILE
 //	https://community.bistudio.com/wiki/description.ext
 // ==============================================================================
 // *	Includes the most nessasary configs for the framework to work
@@ -6,26 +6,25 @@
 #define QUOTE(var1) #var1
 #define DOUBLES(var1,var2) ##var1##_##var2
 #define TRIPLES(var1,var2,var3) ##var1##_##var2##_##var3
-#include "script_Component.hpp"
-#include "Scripts\OKS_Dynamic\LARs\compositions\compositions.cfg"
+#include "\OKS_GOL_Misc\script_Component.hpp"
+#include "Modules\LARs\compositions\compositions.cfg"
 
 class GW_FRAMEWORK {	// NOTE: SENSETIVE, UPPERCASE ONLY FOR BOOL
 	class Core {
 		Version = QUOTE(VERSION);
 	};
-
 	class Naming {		
 		//	NOTE: Changing any of these settings will require mission reload for it to be affected
 		#define GAME_MODE "COOP"								// GameMode
 		#define PLAYER_COUNT "36"								// Player Count - Do not go above 36 - Server Limit 
-		#define BRIEFING_NAME "CQB Training 10.0"					// Mission Name
+		#define BRIEFING_NAME "CQB Training 12.0"					// Mission Name
 		#define LOBBY_DESCRIPTION ""							// Description in mission select
 		#define ON_LOAD_TEXT ""									// Description on loading
 		#define MISSION_VERSION 1								// Version of mission
 		#define SELECT_PICTURE ""								// Path to loading screen
 		//#define SELECT_PICTURE RANDOM_PICTURES				// Random loading screen
-
-		Author = "Oksman";				// Author
+		// picture path: "\OKS_GOL_Misc\data\images\loadImage.jpg"
+		Author = "Oksman, Blu";				// Author
 		AuthorUID[] = {"_SP_PLAYER_"};			// UIDs with admin access
 
 		Name = __EVAL(GAME_MODE + PLAYER_COUNT + " " + BRIEFING_NAME);
@@ -58,8 +57,6 @@ disableChannels[]={{0,true,true},{1,false,true},{2,false,true},{5,false,true}};
 disabledAi = 1;
 ACE_maxWeightcarry = 1800;
 ACE_maxWeightdrag = 2000;
-//disableRandomization[] = {"CAManBase"};	// Disable random gear for units
-//disableRandomization[] = {"AllVehicles"};	// Disable for vehicles and units
 enableDebugConsole = 1;
 joinUnassigned = 1;
 scriptedPlayer = 1;
@@ -67,26 +64,19 @@ scriptedPlayer = 1;
 corpseManagerMode = 3;
 corpseLimit = 25; // Default: 15
 corpseRemovalMinTime = 120; // seconds. Default: 10
-corpseRemovalMaxTime = 600; // seconds. Default: 3600
+corpseRemovalMaxTime = 3600; // seconds. Default: 3600
 disposalCheckPeriod = 30; // seconds. Default: 10
-minPlayerDistance[] = {250, 1000, 0}; // meters. Default: {0, 0, 0}
+minPlayerDistance[] = {400, 1200, 0}; // meters. Default: {0, 0, 0}
 weaponholderManagerMode = 0; // Default: 0
 wreckManagerMode = 1;
 wreckLimit = 10; // seconds. Default: 15
-wreckRemovalMinTime = 180; // seconds. Default: 10
-wreckRemovalMaxTime = 900; // seconds. Default: 36000 (10 hours)
-
+wreckRemovalMinTime = 600; // seconds. Default: 10
+wreckRemovalMaxTime = 3600; // seconds. Default: 36000 (10 hours)
 
 respawn = "BASE";
 respawnOnStart = 0;
-
-// Comment this to remove default respawn.
 respawnTemplates[] = {"Counter"};
 respawnDelay = 20;
-
-// Uncomment this for Spectator
-//respawnTemplates[] = {"ACE_Spectator"};
-//respawnDelay = 648000;
 
 class Params {
 	#define LOAD_PARAMS
@@ -109,47 +99,20 @@ class Params {
 		texts[] = { "No", "Yes" };
 		values[] = { 0, 1 };
 		default = 0;
+	};	
+
+	class ShouldGiveServiceStationToVehicle
+	{
+		title = "Should non-MHQ vehicles have service station?";
+		texts[] = { "Yes", "No" };
+		values[] = { 1, 0 };
+		default = 1;
 	};		
 };
 
 class CfgFunctions {
-	#include "Scripts\OKS_Dynamic\LARs\spawnComp\functions\functions.cpp"
+	#include "Modules\LARs\spawnComp\functions\functions.cpp"
 	#include "Modules\Callsigns\Functions\functions.hpp"
-
-    class NEKY
-    {
-        class Tasks
-        {
-			class Tasks_Init
-			{
-				file = "Scripts\NEKY_Tasks\Init.sqf";
-				PreInit = 1;
-			};
-        };
-    };
-
-	class BLUFUNC
-	{
-		class Radios
-		{
-			class Radio_Channel_Init
-			{
-				file = "Scripts\GOL_PlayerSetup\BLU_SetChannel.sqf";
-				preInit = 1;
-			};
-		};
-	};
-};
-
-class CfgUnitInsignia
-{
-	class GOL_Insignia_Hellfish
-	{
-		displayName = "1st Squad - Flying Hellfish";	// name displayed in Arsenal
-		author = "Bohemia Interactive";				// author displayed in Arsenal
-		texture = "Images\hellfish.paa"; // image path
-		textureVehicle = "";						// does nothing, was reserved for future use
-	};
 };
 
 class GW_Modules_Base {
@@ -161,6 +124,130 @@ class GW_Modules_Base {
 	postInit = "postInit.sqf";
 	requiredModules[] = {};
 	requiredAddons[] = {};
+};
+
+class CfgSounds
+{
+	sounds[] = {}; // OFP required it filled, now it can be empty or absent depending on the game's version
+
+	class OKS_CountDown
+	{
+		name = "OKS_CountDown";						// display name
+		sound[] = { "Training\MarksmanQualification\oks_countdown.ogg", 1, 1, 25 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - xtitles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 0;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 0;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};
+
+	class OKS_Buzzer
+	{
+		name = "OKS_Buzzer";						// display name
+		
+		sound[] = { "Training\MarksmanQualification\oks_buzzer.ogg", 1, 1, 25 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - xtitles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 0;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 0;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};
+
+	class OKS_FailBuzz
+	{
+		name = "OKS_FailBuzz";						// display name
+		sound[] = { "Training\MarksmanQualification\oks_failbuzz.ogg", 0.6, 1, 25 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - xtitles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 0;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 0;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};	
+
+	class oks_hit_1
+	{
+		name = "oks_hit_1";						// display name
+		sound[] = { "Training\MarksmanQualification\oks_hit_1.ogg", 1, 1, 25 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - xtitles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 0;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 0;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};	
+
+	class oks_hit_2
+	{
+		name = "oks_hit_2";						// display name
+		sound[] = { "Training\MarksmanQualification\oks_hit_2.ogg", 1, 1, 25 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - xtitles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 0;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 0;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};	
+
+	class oks_hit_3
+	{
+		name = "oks_hit_3";						// display name
+		sound[] = { "Training\MarksmanQualification\oks_hit_3.ogg", 1, 1, 25 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - xtitles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 0;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 0;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};	
+
+	class oks_hit_4
+	{
+		name = "oks_hit_4";						// display name
+		sound[] = { "Training\MarksmanQualification\oks_hit_4.ogg", 1, 1, 25 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - xtitles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 0;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 0;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};	
+
+	class oks_hit_5
+	{
+		name = "oks_hit_5";						// display name
+		sound[] = { "Training\MarksmanQualification\oks_hit_5.ogg", 1, 1, 25 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - xtitles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 0;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 0;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};	
+
+	class oks_hit_6
+	{
+		name = "oks_hit_6";						// display name
+		sound[] = { "Training\MarksmanQualification\oks_hit_6.ogg", 1, 1, 25 };	// file, volume, pitch, maxDistance
+		titles[] = { 0, "" };			// subtitles
+
+		titlesFont = "LCD14";		// OFP:R - xtitles font family
+		titlesSize = 0.1;			// OFP:R - titles font size
+
+		forceTitles = 0;			// Arma 3 - display titles even if global show titles option is off (1) or not (0)
+		titlesStructured = 0;		// Arma 3 - treat titles as Structured Text (1) or not (0)
+	};	
+
 };
 
 class GW_Modules {

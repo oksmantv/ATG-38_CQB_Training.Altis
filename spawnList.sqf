@@ -1,4 +1,4 @@
-/*
+﻿/*
 	AUTHOR: GuzzenVonLidl
 	Description:
 		What case tha should be called for the zone player is in
@@ -9,7 +9,7 @@
 	Returning Value:
 		None 
 */
-#include "script_Component.hpp"
+#include "\OKS_GOL_MISC\script_Component.hpp"
 #define	COMPONENT spawnList
 
 if !(isServer) then {false};
@@ -30,49 +30,49 @@ switch (_case) do {
 	case 1: {
 
 		if(isServer) then {
-			waitUntil{sleep 5; !(isNil "OKS_CreateZone")};
-			[Trigger_1,false,[0,8,false,false],civilian,4,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],true] spawn OKS_CreateZone;
+			waitUntil{sleep 5; !(isNil "OKS_fnc_CreateZone")};
+			[Trigger_1,false,[0,8,false,false],civilian,4,0,0,[0,true,false,0],[0,false],[0,false],[0,0,0,0,0],true] spawn OKS_fnc_CreateZone;
 		};
 
 	};
 
 	case 2: {
 		SystemChat "Triggered Live Insert 1";
-		[selectRandom [getPos airdrop_spawn_1,getPos airdrop_spawn_9,getPos airdrop_spawn_10],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos airdrop_spawn_11,getPos airdrop_spawn_12,getPos airdrop_spawn_13],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos airdrop_spawn_8,getPos airdrop_spawn_7,getPos airdrop_spawn_2],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos airdrop_spawn_3,getPos airdrop_spawn_4,getPos airdrop_spawn_5,getPos airdrop_spawn_6],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
+		[selectRandom [getPos airdrop_spawn_1,getPos airdrop_spawn_9,getPos airdrop_spawn_10],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos airdrop_spawn_11,getPos airdrop_spawn_12,getPos airdrop_spawn_13],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos airdrop_spawn_8,getPos airdrop_spawn_7,getPos airdrop_spawn_2],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos airdrop_spawn_3,getPos airdrop_spawn_4,getPos airdrop_spawn_5,getPos airdrop_spawn_6],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
 	};
 
 	case 3: {
 		SystemChat "Triggered Live Insert 2";
-		[selectRandom [getPos fastrope_1_spawn_11,getPos fastrope_1_spawn_8,getPos fastrope_1_spawn_7],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos fastrope_1_spawn_6,getPos fastrope_1_spawn_5,getPos fastrope_1_spawn_4],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos fastrope_1_spawn_1,getPos fastrope_1_spawn_12,getPos fastrope_1_spawn_13],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos fastrope_1_spawn_9,getPos fastrope_1_spawn_2,getPos fastrope_1_spawn_10],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos fastrope_1_spawn_3,getPos fastrope_1_spawn_4,getPos fastrope_1_spawn_5],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
+		[selectRandom [getPos fastrope_1_spawn_11,getPos fastrope_1_spawn_8,getPos fastrope_1_spawn_7],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos fastrope_1_spawn_6,getPos fastrope_1_spawn_5,getPos fastrope_1_spawn_4],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos fastrope_1_spawn_1,getPos fastrope_1_spawn_12,getPos fastrope_1_spawn_13],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos fastrope_1_spawn_9,getPos fastrope_1_spawn_2,getPos fastrope_1_spawn_10],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos fastrope_1_spawn_3,getPos fastrope_1_spawn_4,getPos fastrope_1_spawn_5],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
 
 		sleep 10;
 
-		[selectRandom [getPos fastrope_1_spawn_11,getPos fastrope_1_spawn_8,getPos fastrope_1_spawn_7],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos fastrope_1_spawn_6,getPos fastrope_1_spawn_5,getPos fastrope_1_spawn_4],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos fastrope_1_spawn_1,getPos fastrope_1_spawn_12,getPos fastrope_1_spawn_13],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos fastrope_1_spawn_9,getPos fastrope_1_spawn_2,getPos fastrope_1_spawn_10],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos fastrope_1_spawn_3,getPos fastrope_1_spawn_4,getPos fastrope_1_spawn_5],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
+		[selectRandom [getPos fastrope_1_spawn_11,getPos fastrope_1_spawn_8,getPos fastrope_1_spawn_7],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos fastrope_1_spawn_6,getPos fastrope_1_spawn_5,getPos fastrope_1_spawn_4],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos fastrope_1_spawn_1,getPos fastrope_1_spawn_12,getPos fastrope_1_spawn_13],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos fastrope_1_spawn_9,getPos fastrope_1_spawn_2,getPos fastrope_1_spawn_10],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos fastrope_1_spawn_3,getPos fastrope_1_spawn_4,getPos fastrope_1_spawn_5],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
 	};
 
 	case 4: {
 
 		SystemChat "Triggered Live Extract 3";
-		[selectRandom [getPos extract_1_spawn_1,getPos extract_1_spawn_9,getPos extract_1_spawn_8],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos extract_1_spawn_11,getPos extract_1_spawn_7,getPos extract_1_spawn_6],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos extract_1_spawn_5,getPos extract_1_spawn_4,getPos extract_1_spawn_10,extract_1_spawn_3],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos extract_1_spawn_13,getPos extract_1_spawn_12 ,getPos extract_1_spawn_2],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
+		[selectRandom [getPos extract_1_spawn_1,getPos extract_1_spawn_9,getPos extract_1_spawn_8],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos extract_1_spawn_11,getPos extract_1_spawn_7,getPos extract_1_spawn_6],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos extract_1_spawn_5,getPos extract_1_spawn_4,getPos extract_1_spawn_10,extract_1_spawn_3],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos extract_1_spawn_13,getPos extract_1_spawn_12 ,getPos extract_1_spawn_2],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
 		sleep 10;
-		[selectRandom [getPos extract_1_spawn_1,getPos extract_1_spawn_9,getPos extract_1_spawn_8],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos extract_1_spawn_11,getPos extract_1_spawn_7,getPos extract_1_spawn_6],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos extract_1_spawn_5,getPos extract_1_spawn_4,getPos extract_1_spawn_10,extract_1_spawn_3],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
-		[selectRandom [getPos extract_1_spawn_13,getPos extract_1_spawn_12 ,getPos extract_1_spawn_2],1,independent,200] execVM "Scripts\OKS_Ambience\OKS_Rush_SpawnGroup.sqf";
+		[selectRandom [getPos extract_1_spawn_1,getPos extract_1_spawn_9,getPos extract_1_spawn_8],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos extract_1_spawn_11,getPos extract_1_spawn_7,getPos extract_1_spawn_6],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos extract_1_spawn_5,getPos extract_1_spawn_4,getPos extract_1_spawn_10,extract_1_spawn_3],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
+		[selectRandom [getPos extract_1_spawn_13,getPos extract_1_spawn_12 ,getPos extract_1_spawn_2],"rush",1,independent,200] spawn OKS_fnc_Lambs_SpawnGroup;
 
 	};
 
@@ -82,7 +82,7 @@ switch (_case) do {
 		GOL_MaxUnits = 0.25;
 		publicVariable "GOL_MaxUnits";
 
-		["hq","side","Urban Movement Course Activated."] remoteExec ["OKS_Chat",0];
+		["hq","side","Urban Movement Course Activated."] remoteExec ["OKS_fnc_Chat",0];
 		{_X setMarkerAlpha 1} foreach ["marker_471","marker_472","marker_473","marker_475"];
 
 		[[[[16700.8,12839.3,-9.15527e-005],306,"Up",[]],[[16709.2,12853.1,1.19157],306,"Up",[]],[[16711.6,12848.4,3.78997],11,"Up",[]],[[16720.2,12826.6,4.08891],306,"Up",[]],[[16722.6,12829.1,0.323387],302,"Up",[]],[[16731.2,12840.7,0.423428],105,"Up",[]],[[16730.6,12822.2,3.60383],27,"Up",[]],[[16727.3,12818.6,0.415915],306,"Up",[]]],[],[]] spawn OKS_SpawnStatic;
@@ -102,7 +102,7 @@ switch (_case) do {
 		[[],[["UK3CB_AAF_O_PKM_High",[16898.3,12738.8,3.87622],348,[["gunner",-1,[0]]],[]],["UK3CB_AAF_O_PKM_Low",[16996.3,12710.4,-2.47955e-005],312,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 		
 		sleep 180;
-		["hq","side","Urban Movement Hunters Activate."] remoteExec ["OKS_Chat",0];
+		["hq","side","Urban Movement Hunters Activate."] remoteExec ["OKS_fnc_Chat",0];
 		{[_X,1,east,1000,[],UrbanMovementTrigger] spawn OKS_Rush_Spawner; sleep 120;} foreach [hunt_1,hunt_2,hunt_3,hunt_4,hunt_5,hunt_6,hunt_7];
 
 	};
@@ -113,7 +113,7 @@ switch (_case) do {
 		GOL_MaxUnits = 0.5;
 		publicVariable "GOL_MaxUnits";
 
-		["hq","side","Urban Movement Course Activated."] remoteExec ["OKS_Chat",0];
+		["hq","side","Urban Movement Course Activated."] remoteExec ["OKS_fnc_Chat",0];
 		{_X setMarkerAlpha 1} foreach ["marker_471","marker_472","marker_473","marker_475"];
 
 		[[[[16700.8,12839.3,-9.15527e-005],306,"Up",[]],[[16709.2,12853.1,1.19157],306,"Up",[]],[[16711.6,12848.4,3.78997],11,"Up",[]],[[16720.2,12826.6,4.08891],306,"Up",[]],[[16722.6,12829.1,0.323387],302,"Up",[]],[[16731.2,12840.7,0.423428],105,"Up",[]],[[16730.6,12822.2,3.60383],27,"Up",[]],[[16727.3,12818.6,0.415915],306,"Up",[]]],[],[]] spawn OKS_SpawnStatic;
@@ -133,7 +133,7 @@ switch (_case) do {
 		[[],[["UK3CB_AAF_O_PKM_High",[16898.3,12738.8,3.87622],348,[["gunner",-1,[0]]],[]],["UK3CB_AAF_O_PKM_Low",[16996.3,12710.4,-2.47955e-005],312,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 		
 		sleep 180;
-		["hq","side","Urban Movement Hunters Activate."] remoteExec ["OKS_Chat",0];
+		["hq","side","Urban Movement Hunters Activate."] remoteExec ["OKS_fnc_Chat",0];
 		{[_X,2,east,1000,[],UrbanMovementTrigger] spawn OKS_Rush_Spawner; sleep 120;} foreach [hunt_1,hunt_2,hunt_3,hunt_4,hunt_5,hunt_6,hunt_7];
 
 	};	
@@ -144,7 +144,7 @@ switch (_case) do {
 		GOL_MaxUnits = 0.75;
 		publicVariable "GOL_MaxUnits";
 
-		["hq","side","Urban Movement Course Activated."] remoteExec ["OKS_Chat",0];
+		["hq","side","Urban Movement Course Activated."] remoteExec ["OKS_fnc_Chat",0];
 		{_X setMarkerAlpha 1} foreach ["marker_471","marker_472","marker_473","marker_475"];
 
 		[[[[16700.8,12839.3,-9.15527e-005],306,"Up",[]],[[16709.2,12853.1,1.19157],306,"Up",[]],[[16711.6,12848.4,3.78997],11,"Up",[]],[[16720.2,12826.6,4.08891],306,"Up",[]],[[16722.6,12829.1,0.323387],302,"Up",[]],[[16731.2,12840.7,0.423428],105,"Up",[]],[[16730.6,12822.2,3.60383],27,"Up",[]],[[16727.3,12818.6,0.415915],306,"Up",[]]],[],[]] spawn OKS_SpawnStatic;
@@ -164,7 +164,7 @@ switch (_case) do {
 		[[],[["UK3CB_AAF_O_PKM_High",[16898.3,12738.8,3.87622],348,[["gunner",-1,[0]]],[]],["UK3CB_AAF_O_PKM_Low",[16996.3,12710.4,-2.47955e-005],312,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 		
 		sleep 180;
-		["hq","side","Urban Movement Hunters Activate."] remoteExec ["OKS_Chat",0];
+		["hq","side","Urban Movement Hunters Activate."] remoteExec ["OKS_fnc_Chat",0];
 		{[_X,3,east,1000,[],UrbanMovementTrigger] spawn OKS_Rush_Spawner; sleep 120;} foreach [hunt_1,hunt_2,hunt_3,hunt_4,hunt_5,hunt_6,hunt_7];
 
 	};	
@@ -175,7 +175,7 @@ switch (_case) do {
 		GOL_MaxUnits = 1;
 		publicVariable "GOL_MaxUnits";
 
-		["hq","side","Urban Movement Course Activated."] remoteExec ["OKS_Chat",0];
+		["hq","side","Urban Movement Course Activated."] remoteExec ["OKS_fnc_Chat",0];
 		{_X setMarkerAlpha 1} foreach ["marker_471","marker_472","marker_473","marker_475"];
 
 		[[[[16700.8,12839.3,-9.15527e-005],306,"Up",[]],[[16709.2,12853.1,1.19157],306,"Up",[]],[[16711.6,12848.4,3.78997],11,"Up",[]],[[16720.2,12826.6,4.08891],306,"Up",[]],[[16722.6,12829.1,0.323387],302,"Up",[]],[[16731.2,12840.7,0.423428],105,"Up",[]],[[16730.6,12822.2,3.60383],27,"Up",[]],[[16727.3,12818.6,0.415915],306,"Up",[]]],[],[]] spawn OKS_SpawnStatic;
@@ -195,20 +195,20 @@ switch (_case) do {
 		[[],[["UK3CB_AAF_O_PKM_High",[16898.3,12738.8,3.87622],348,[["gunner",-1,[0]]],[]],["UK3CB_AAF_O_PKM_Low",[16996.3,12710.4,-2.47955e-005],312,[["gunner",-1,[0]]],[]]],[]] call GW_Common_fnc_spawnGroup;
 		
 		sleep 180;
-		["hq","side","Urban Movement Hunters Activate."] remoteExec ["OKS_Chat",0];
+		["hq","side","Urban Movement Hunters Activate."] remoteExec ["OKS_fnc_Chat",0];
 		{[_X,4,east,1000,[],UrbanMovementTrigger] spawn OKS_Rush_Spawner; sleep 120;} foreach [hunt_1,hunt_2,hunt_3,hunt_4,hunt_5,hunt_6,hunt_7];
 
 	};		
 
 	case 9:{
 		// CQB Movement Course Red
-		["hq","side","CQB Movement Course Red Started"] remoteExec ["OKS_Chat",0];
+		["hq","side","CQB Movement Course Red Started"] remoteExec ["OKS_fnc_Chat",0];
 		[[[[16793.7,12918.7,4.00543e-005],325,"Middle",[]],[[16785.3,12892.4,0.00018692],313,"Up",[]],[[16730.6,12911,0.00165749],136,"Middle",[]],[[16777.4,12851.6,-0.0211048],84,"Middle",[]],[[16747.9,12879.2,0.591227],261,"Up",[]],[[16767.3,12861.6,0.502663],263,"Up",[]],[[16746.8,12841.9,-2.67029e-005],308,"Middle",[]],[[16723.4,12827,3.75195],31,"Middle",[]],[[16709.6,12846.9,3.89124],58,"Middle",[]],[[16726.4,12836.2,-2.28882e-005],302,"Middle",[]],[[16670.8,12840.4,-0.000606537],120,"Middle",[]],[[16720.2,12791.5,0.00815392],110,"Middle",[]],[[16701.4,12783.3,0.41503],312,"Up",[]],[[16690.6,12792.6,0.619528],124,"Up",[]],[[16693.8,12789.8,3.86396],119,"Up",[]],[[16698.4,12792.3,3.68798],23,"Up",[]],[[16680.8,12795.6,4.16233],82,"Up",[]],[[16701.9,12786.8,0.408474],43,"Up",[]],[[16681.1,12794.7,0.813801],43,"Up",[]],[[16684.6,12800.9,4.07074],50,"Up",[]],[[16795.8,12955,3.77346],124,"Up",[]],[[16812.9,12905.1,4.14961],21,"Up",[]],[[16826.4,12925,0.474037],318,"Up",[]],[[16814.3,12902.6,0.177422],106,"Middle",[]],[[16832.8,12922.4,0.147886],173,"Middle",[]],[[16709.1,12910.8,4.25391],117,"Middle",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 	};
 
 	case 10:{	
 		// CQB Movement Course Yellow
-		["hq","side","CQB Movement Course Yellow Started"] remoteExec ["OKS_Chat",0];
+		["hq","side","CQB Movement Course Yellow Started"] remoteExec ["OKS_fnc_Chat",0];
 		[[[[16787.8,12848.2,-0.00516319],326,"Middle",[]],[[16730,12784.4,-5.91278e-005],344,"Middle",[]],[[16808.2,12718.8,1.90735e-005],331,"Middle",[]],[[16783.2,12721.4,0.854486],331,"Middle",[]],[[16789.8,12715.9,1.04212],4,"Middle",[]],[[16789.6,12716.9,4.46059],331,"Middle",[]],[[16785.7,12721.6,4.29358],331,"Middle",[]],[[16779.7,12722,4.2911],58,"Middle",[]],[[16795.5,12717.7,4.02754],41,"Middle",[]],[[16792.1,12720.5,4.56983],47,"Up",[]],[[16869.4,12914.4,0],123,"Up",[]],[[16883.5,12882.5,0.516628],130,"Up",[]],[[16842.2,12883.6,3.96617],35,"Middle",[]],[[16903,12840.8,0.187567],316,"Middle",[]],[[16842.2,12859.7,0.424566],62,"Middle",[]],[[16823.5,12870.6,0],33,"Middle",[]],[[16805.5,12861.2,0.5016],214,"Middle",[]],[[16825.4,12848.3,0.775747],351,"Up",[]],[[16835.7,12835.6,1.1542],338,"Up",[]],[[16839.8,12800.4,-1.90735e-006],333,"Middle",[]],[[16878,12800.7,4.08426],299,"Up",[]],[[16802.6,12834.9,0],321,"Middle",[]],[[16814.9,12809.9,0],280,"Middle",[]],[[16796.2,12784.7,3.79872],331,"Up",[]],[[16778.1,12798.1,3.91084],118,"Up",[]],[[16769.6,12799.7,0.687349],197,"Up",[]],[[16792.7,12776.7,0.297501],183,"Up",[]],[[16760,12747.2,4.38536],349,"Middle",[]],[[16748.4,12762.8,0],86,"Middle",[]],[[16771.9,12725.6,0],64,"Middle",[]],[[16768.7,12741.7,3.99986],66,"Up",[]],[[16799.4,12813.5,1.90735e-006],132,"Up",[]],[[16773.8,12823.9,0],81,"Middle",[]]],[],[]] call GW_Common_fnc_spawnGroup;
 	};
 
@@ -216,3 +216,4 @@ switch (_case) do {
 		ERROR(FORMAT_1("Case missing: %1", _case));
 	};
 };
+

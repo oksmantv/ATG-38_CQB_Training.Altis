@@ -38,7 +38,7 @@ _map = "ItemMap";
 _gps = "ItemGPS";
 _compass = "ItemCompass";
 _watch = "ItemWatch";
-_nvg = "";
+_nvg = "ACE_NVG_Gen4_Black";
 _parachute = "B_Parachute";
 
 _demoCharge = "DemoCharge_Remote_Mag";			// Small
@@ -49,13 +49,15 @@ if (true) then {
 	_Android = "ItemAndroid";
 	_microDAGR = "ItemMicroDAGR";
 	_HelmetCam = "ItemcTabHCam";
-
-	if (_isPlayer) then {
-		_gps = "";
+	_UAVTerminal = "B_UavTerminal";
+	_gps = "";
+	if(hasInterface) then {
+		if(_role in ["pm","ab"]) then {
+			_gps = _microDAGR;
+		};
 		if (_role in ["pl","fac","crew","sl","ftl"]) then {
 			_gps = _Android;
 		};
-
 		if (_role in ["p","pj","dragon","marksman"]) then {
 			_gps = _cTab;
 		};
@@ -65,46 +67,53 @@ if (true) then {
 _toolKit = "ToolKit";
 _bandage = "FirstAidKit";
 _blood = "MediKit";
-_epi = "";
-_morph = "";
 _IFAK = [[_bandage,2]];					//	Individual First Aid Kits
 _FAKSmall = [[_bandage,15]];			//	Medic Kit Small
 _FAKMedium = [[_bandage,20],[_blood,1]];	//	Medic Kit Big
-_FAKBig = [[_bandage,25],[_blood,1]];	//	Medic Kit Big
-if (true) then {	//	ACE
-	_bandage = "ACE_elasticBandage";
-	_blood = "ACE_bloodIV";
-	_epi = "ACE_epinephrine";
-	_morph = "ACE_morphine";
-	_tourn = "ACE_tourniquet";
-	_pak = "ACE_personalAidKit";
-	_saline = "ACE_salineIV";
-	_salineSm = "ACE_SalineIV_500";
+_FAKSquad = [[_bandage,25],[_blood,1]];	//	Medic Kit Big
+_FAKPlatoon = [[_bandage,25],[_blood,1]];	//	Medic Kit Big
 
-	_IFAK = [[_bandage,15],[_tourn,2],[_morph,3]];
+_bandage = "ACE_elasticBandage";
+_blood = "ACE_bloodIV";
+_epi = "ACE_epinephrine";
+_morph = "ACE_morphine";
+_tourn = "ACE_tourniquet";
+_pak = "ACE_personalAidKit";
+_saline = "ACE_salineIV";
+_salineSm = "ACE_SalineIV_500";
 
-		_FAKSmall = [
-			[_bandage,5],
-			[_tourn,2],
-			[_morph,3]
-		];
-		_FAKMedium = [
-			[_bandage,15],
-			[_morph,3],
-			[_tourn,3],
-			[_epi,5],
-			[_saline,12],
-			[_pak,1]
-		];		
-		_FAKBig = [
-			[_bandage,20],
-			[_tourn,4],
-			[_morph,6],
-			[_epi,6],
-			[_saline,18],
-			[_pak,1]
-		];
-};
+_IFAK = [[_bandage,17],[_tourn,2],[_morph,5]];
+
+_FAKSmall = [
+	[_bandage,5],
+	[_tourn,2],
+	[_morph,5]
+];
+_FAKMedium = [
+	[_bandage,15],
+	[_tourn,3],
+	[_morph,5],
+	[_epi,5],
+	[_saline,10],
+	[_pak,1]
+];	
+_FAKSquad = [
+	[_bandage,25],
+	[_tourn,3],
+	[_morph,10],
+	[_epi,10],
+	[_saline,16],
+	[_pak,1]
+];				
+_FAKPlatoon = [
+	[_bandage,30],
+	[_tourn,5],
+	[_morph,15],
+	[_epi,15],
+	[_saline,25],
+	[_pak,1]
+];
+
 
 _barrel = "";
 _cables = "";

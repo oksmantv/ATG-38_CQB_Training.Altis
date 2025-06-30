@@ -16,13 +16,14 @@ DZ_GetCrossingArray = compile preprocessFileLineNumbers "Training\Dangerzone\DZ_
 DZ_ForeachCrossing = compile preprocessFileLineNumbers "Training\Dangerzone\DZ_ForeachCrossing.sqf";
 DZ_ForeachUnits = compile preprocessFileLineNumbers "Training\Dangerzone\DZ_ForeachUnits.sqf";
 
-if(isServer) then {
-	[DZ_Terminal_2,2,DZ_Trigger_2] spawn DZ_Actions;
-	[DZ_Terminal_Reverse_2,2,DZ_Trigger_2] spawn DZ_Actions;
+[DZ_Terminal_2,2,DZ_Trigger_2] spawn DZ_Actions;
+[DZ_Terminal_Reverse_2,2,DZ_Trigger_2] spawn DZ_Actions;
 
-	[DZ_Terminal_1,1,DZ_Trigger_1] spawn DZ_Actions;
-	[DZ_Terminal_Reverse_1,1,DZ_Trigger_1] spawn DZ_Actions;
+[DZ_Terminal_1,1,DZ_Trigger_1] spawn DZ_Actions;
+[DZ_Terminal_Reverse_1,1,DZ_Trigger_1] spawn DZ_Actions;
 
-	[HTerminal_1,[HCourse_1,HCourse_2,HCourse_3],[HCourse2_1,HCourse2_2,HCourse2_3]] spawn DZ_BarrierAction;
-	[HTerminal_2,[HCourse_4,HCourse_5,HCourse_6],[HCourse3_1,HCourse3_2,HCourse3_3]] spawn DZ_BarrierAction;
-};
+[HTerminal_1,[HCourse_1,HCourse_2,HCourse_3],[HCourse2_1,HCourse2_2,HCourse2_3]] spawn DZ_BarrierAction;
+[HTerminal_2,[HCourse_4,HCourse_5,HCourse_6],[HCourse3_1,HCourse3_2,HCourse3_3]] spawn DZ_BarrierAction;
+
+dzterminalmain addAction ["<t color='#11d037'>Show Dangerzone Area</t>",{ dzshow=true; publicVariable "dzshow"; }];
+dzterminalmain addAction ["<t color='#d01111'>Hide Dangerzone Area</t>",{ dzshow=false; publicVariable "dzshow"; }];
