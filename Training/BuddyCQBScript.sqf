@@ -36,42 +36,55 @@ Params [
 	"_Trigger",
 	["_PatrolSpawns",[],[[]]],
 	["_HuntSpawns",[],[[]]],
-	["_HuntStartTrigger",nil,[objNull]]
+	["_HuntStartTrigger",objNull,[objNull]],
+	["_HuntEndTrigger",objNull,[objNull]],
+	["_SquadLevel",false,[false]]
 ];
+private ["_PercentageArray"];
+waitUntil {sleep 1; !isNil "OKS_fnc_Patrol_Spawn" && !isNil "OKS_fnc_Lambs_Spawner" && !isNil "OKS_LiveTargets" && !isNil "OKS_CourseReset"};
 
-if(!(_HuntSpawns IsEqualTo [])) then {
-	if(!isNil "_HuntStartTrigger") exitWith {
-		systemChat "_HuntStartTrigger undefined. Exiting."
-	}
+if(_SquadLevel) then {
+	_PercentageArray = [10,20,30,40,50,60,100];
+} else {
+	_PercentageArray = [65,85,100];
 };
-
-waitUntil {sleep 5; !isNil "OKS_fnc_Patrol_Spawn" && !isNil "OKS_fnc_Lambs_Spawner" && !isNil "OKS_LiveTargets" && !isNil "OKS_CourseReset"};
-
 [_TargetArray] remoteExec ["OKS_PopUpTargets",2];
+
 {
 	_Percentage = _X;
 	_Object addAction [format["<t color='#0AE422'>Spawn Live-Targets (%1%2)</t>",_X,"%"],{
 		(_this select 3) Params ["_TargetArray","_PatrolSpawns","_HuntSpawns","_HuntStartTrigger","_Object","_Percentage"];
-		[_TargetArray,_Percentage] remoteExec ["OKS_LiveTargets",2];
-		{
-			[getPos _X,2,50,east] remoteExec ["OKS_fnc_Patrol_Spawn",2];
-		} foreach _PatrolSpawns;
 
-		[_HuntSpawns, _HuntStartTrigger, _Object] spawn {
-			Params ["_HuntSpawns", "_HuntStartTrigger", "_Object"];
-			playSound3D [GetMissionPath "activated.wav", _Object, false, getPosASL _Object, 1, 1, 50];
-			sleep 20;
-			playSound3D [GetMissionPath "Training\MarksmanQualification\oks_buzzer.ogg", _Object, false, getPosASL _Object, 1, 1, 50];
-			waitUntil {sleep 5; triggerActivated (_this select 1)};
+		[_TargetArray,_Percentage] remoteExec ["OKS_LiveTargets",2];
+
+		if(_PatrolSpawns IsNotEqualTo []) exitWith {			
 			{
-				[getPos _X, "rush", 1, east, 1000, [], SCQBEndTrigger, 180] spawn OKS_fnc_Lambs_Spawner;
-				sleep 30;
-			} foreach (_this select 0);
+				[getPos _X,2,50,east] remoteExec ["OKS_fnc_Patrol_Spawn",2];
+			} foreach _PatrolSpawns;
+		};
+
+		if(!isNil "_HuntStartTrigger") exitWith {
+			[_HuntSpawns, _HuntStartTrigger, _Object] spawn {
+				Params ["_HuntSpawns", "_HuntStartTrigger", "_Object"];
+				playSound3D [GetMissionPath "activated.wav", _Object, false, getPosASL _Object, 1, 1, 50];
+				sleep 20;
+				playSound3D [GetMissionPath "Training\MarksmanQualification\oks_buzzer.ogg", _Object, false, getPosASL _Object, 1, 1, 50];
+				waitUntil {sleep 5; triggerActivated (_this select 1)};
+				{
+					[getPos _X, "rush", 1, east, 1000, [], _HuntEndTrigger, 180] spawn OKS_fnc_Lambs_Spawner;
+					sleep 30;
+				} foreach (_this select 0);
+			};
 		};
 	},[_TargetArray,_PatrolSpawns,_HuntSpawns,_HuntStartTrigger,_Object,_Percentage]];
-} foreach [33,66,100];
+} foreach _PercentageArray;
 
 _Object addAction ["<t color='#E40A0A'>Reset Course</t>",{
-	(_this select 3) remoteExec ["OKS_CourseReset",2];
-	SCQBEndTrigger setVariable ["SQCBEnd",true,true];
-},[_TargetArray,_Trigger]];
+	(_this select 3) params ["_TargetArray","_Trigger","_HuntEndTrigger"];
+	[_TargetArray,_Trigger] remoteExec ["OKS_CourseReset",2];
+
+	if(isNil "_HuntEndTrigger") exitWith {
+		"[BuddyCQBScript] _HuntEndTrigger is nil, not resetting hunt end trigger." spawn OKS_fnc_LogDebug;
+	};
+	_HuntEndTrigger setVariable ["SQCBEnd",true,true];
+},[_TargetArray,_Trigger,_HuntEndTrigger]];

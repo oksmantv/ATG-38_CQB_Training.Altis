@@ -63,14 +63,17 @@ if(isServer) then {
 			SCQBR_1, SCQBR_2, SCQBR_3,  
 			SCQBR_4, SCQBR_5, SCQBR_6 
 		], 
-		SCQBStartTrigger 
+		SCQBStartTrigger,
+		SCQBEndTrigger,
+		true
 	] remoteExec ["BuddyCQBScript",0];  sleep 2;
 
 	[LoopImageDZ_1] remoteExec ["LoopImageDZ",0]; sleep 2;
 	[LoopImageDZ_2] remoteExec ["LoopImageDZ",0]; sleep 2;
-
+	[BuddyTerminal_1,[BCT_1_1, BCT_1_10, BCT_1_11, BCT_1_12, BCT_1_2, BCT_1_3, BCT_1_4, BCT_1_5, BCT_1_6, BCT_1_7, BCT_1_8, BCT_1_9],BuddyTargetTrigger_1] remoteExec ["BuddyCQBScript",0]; sleep 2;
 	[BuddyTerminal_2,[BCT_2_1, BCT_2_10, BCT_2_11, BCT_2_12, BCT_2_2, BCT_2_3, BCT_2_4, BCT_2_5, BCT_2_6, BCT_2_7, BCT_2_8, BCT_2_9],BuddyTargetTrigger_2] remoteExec ["BuddyCQBScript",0]; sleep 2;
 	[BuddyTerminal_3,[BCT_3_1, BCT_3_10, BCT_3_11, BCT_3_12, BCT_3_2, BCT_3_3, BCT_3_4, BCT_3_5, BCT_3_6, BCT_3_7, BCT_3_8, BCT_3_9],BuddyTargetTrigger_3] remoteExec ["BuddyCQBScript",0]; sleep 2;
+	// Disabled to make room for Main Squad Exercise in Kavala.
 	//[BuddyTerminal_4,[BCT_4_1, BCT_4_10, BCT_4_11, BCT_4_12, BCT_4_2, BCT_4_3, BCT_4_4, BCT_4_5, BCT_4_6, BCT_4_7, BCT_4_8, BCT_4_9,BCT_4_10,BCT_4_11,BCT_4_12,BCT_4_13,BCT_4_14,BCT_4_15,BCT_4_1,BCT_4_17,BCT_4_18],BuddyTargetTrigger_4] remoteExec ["BuddyCQBScript",0];
 	[BuddyTerminal_5,[BCT_5_1, BCT_5_10, BCT_5_11, BCT_5_12, BCT_5_2, BCT_5_3, BCT_5_4, BCT_5_5, BCT_5_6, BCT_5_7, BCT_5_8, BCT_5_9],BuddyTargetTrigger_5] remoteExec ["BuddyCQBScript",0]; sleep 2;
 	[BuddyTerminal_6,[BCT_6_1, BCT_6_10, BCT_6_11, BCT_6_12, BCT_6_2, BCT_6_3, BCT_6_4, BCT_6_5, BCT_6_6, BCT_6_7, BCT_6_8, BCT_6_9],BuddyTargetTrigger_6] remoteExec ["BuddyCQBScript",0]; sleep 2;

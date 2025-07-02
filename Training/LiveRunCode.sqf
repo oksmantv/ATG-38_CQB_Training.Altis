@@ -69,14 +69,15 @@ if(_RandomSpawn) then {
 
 		// Setup Unit
 		if(_Debug_Variable) then {SystemChat format ["%1 Pos %2",group _unit,getPos _Unit]};
+		_Unit disableAI "PATH";
 		_Unit disableAI "MOVE";
 		_Unit setUnitPos (selectRandom ["UP","MIDDLE"]);
 		_Unit addMPEventHandler ["MPKilled",{[_this select 0] spawn AI_Death}];
 		_Unit setBehaviour "COMBAT";
 		sleep 0.1;
 	} foreach _RandomTargetPositions;
-	[_LiveTargets] remoteExec ["OKS_SetStatic",0];
-	[_HostageGroup] remoteExec ["OKS_SetStatic",0];
+	[_LiveTargets] remoteExec ["OKS_fnc_SetStatic",0];
+	[_HostageGroup] remoteExec ["OKS_fnc_SetStatic",0];
 } else {
 	{
 		[_X,true] remoteExec ["hideObject",0];
@@ -99,7 +100,7 @@ if(_RandomSpawn) then {
 		_Unit setBehaviour "COMBAT";
 		sleep 0.1;
 	} foreach _Targets;
-	[_LiveTargets] remoteExec ["OKS_SetStatic",0];
+	[_LiveTargets] remoteExec ["OKS_fnc_SetStatic",0];
 	{_X doWatch getPos _Target} foreach units _LiveTargets;
 };
 

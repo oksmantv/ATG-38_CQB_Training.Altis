@@ -159,8 +159,7 @@
 
 			[getPos _X, [typeof _X], units _Group, 5, 2, false, true] remoteExec  ["ace_ai_fnc_garrison",0];
 			sleep 2;
-			[_Group] remoteExec ["OKS_SetStatic",0];
-			if(_RandomMove) then { [_Group,0.25,45] spawn OKS_EnablePath; };
+			[_Group] remoteExec ["OKS_fnc_SetStatic",0];
 		} foreach _Houses;
 
 
