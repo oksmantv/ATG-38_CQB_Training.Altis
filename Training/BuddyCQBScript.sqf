@@ -45,7 +45,7 @@ if(!(_HuntSpawns IsEqualTo [])) then {
 	}
 };
 
-waitUntil {sleep 5; !isNil "OKS_Patrol_Spawn" && !isNil "OKS_Lambs_Spawner" && !isNil "OKS_LiveTargets" && !isNil "OKS_CourseReset"};
+waitUntil {sleep 5; !isNil "OKS_fnc_Patrol_Spawn" && !isNil "OKS_fnc_Lambs_Spawner" && !isNil "OKS_LiveTargets" && !isNil "OKS_CourseReset"};
 
 [_TargetArray] remoteExec ["OKS_PopUpTargets",2];
 {
@@ -54,7 +54,7 @@ waitUntil {sleep 5; !isNil "OKS_Patrol_Spawn" && !isNil "OKS_Lambs_Spawner" && !
 		(_this select 3) Params ["_TargetArray","_PatrolSpawns","_HuntSpawns","_HuntStartTrigger","_Object","_Percentage"];
 		[_TargetArray,_Percentage] remoteExec ["OKS_LiveTargets",2];
 		{
-			[getPos _X] remoteExec ["OKS_Patrol_Spawn",2];
+			[getPos _X,2,50,east] remoteExec ["OKS_fnc_Patrol_Spawn",2];
 		} foreach _PatrolSpawns;
 
 		[_HuntSpawns, _HuntStartTrigger, _Object] spawn {
@@ -64,7 +64,7 @@ waitUntil {sleep 5; !isNil "OKS_Patrol_Spawn" && !isNil "OKS_Lambs_Spawner" && !
 			playSound3D [GetMissionPath "Training\MarksmanQualification\oks_buzzer.ogg", _Object, false, getPosASL _Object, 1, 1, 50];
 			waitUntil {sleep 5; triggerActivated (_this select 1)};
 			{
-				[getPos _X, "rush", 1, east, 1000, [], SCQBEndTrigger, 180] spawn OKS_Lambs_Spawner;
+				[getPos _X, "rush", 1, east, 1000, [], SCQBEndTrigger, 180] spawn OKS_fnc_Lambs_Spawner;
 				sleep 30;
 			} foreach (_this select 0);
 		};

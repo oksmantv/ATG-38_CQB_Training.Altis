@@ -16,5 +16,5 @@ playSound3D [MISSION_ROOT + "activated.wav", _Target, false, _Target, 5, 1, 25];
 
 waitUntil{triggerActivated _Trigger};
 _Time = 0;
-waitUntil{sleep 0.01; _Time = _Time + 0.01; {_X getVariable ["TargetDown",false]} count _Targets isEqualTo _CountOfTargets};
+waitUntil{sleep 0.01; _Time = _Time + 0.01; {_X getVariable ["TargetDown",false]} count _Targets isEqualTo _CountOfTargets && (count (list _Trigger) >= 2)};
 [_Caller,format["Dry Run Complete. Time: %1 seconds",_Time]] remoteExec ["SideChat",0];

@@ -18,13 +18,6 @@ params [
 	"_case"
 ];
 
-if(isServer && GOL_OKS_AMBIENCE isEqualTo 1) then {
-
-	waitUntil {sleep 1; !(isNil "OKS_FaceSwap")};
-	[east,"russian"] spawn OKS_FaceSwap;
-};
-
-
 switch (_case) do {
 
 	case 1: {
@@ -103,7 +96,7 @@ switch (_case) do {
 		
 		sleep 180;
 		["hq","side","Urban Movement Hunters Activate."] remoteExec ["OKS_fnc_Chat",0];
-		{[_X,1,east,1000,[],UrbanMovementTrigger] spawn OKS_Rush_Spawner; sleep 120;} foreach [hunt_1,hunt_2,hunt_3,hunt_4,hunt_5,hunt_6,hunt_7];
+		{[_X,"rush",1,east,1000,[],UrbanMovementTrigger] spawn OKS_fnc_Lambs_Spawner; sleep 120;} foreach [hunt_1,hunt_2,hunt_3,hunt_4,hunt_5,hunt_6,hunt_7];
 
 	};
 
@@ -134,7 +127,7 @@ switch (_case) do {
 		
 		sleep 180;
 		["hq","side","Urban Movement Hunters Activate."] remoteExec ["OKS_fnc_Chat",0];
-		{[_X,2,east,1000,[],UrbanMovementTrigger] spawn OKS_Rush_Spawner; sleep 120;} foreach [hunt_1,hunt_2,hunt_3,hunt_4,hunt_5,hunt_6,hunt_7];
+		{[_X,"rush",2,east,1000,[],UrbanMovementTrigger] spawn OKS_fnc_Lambs_Spawner; sleep 120;} foreach [hunt_1,hunt_2,hunt_3,hunt_4,hunt_5,hunt_6,hunt_7];
 
 	};	
 
@@ -165,7 +158,7 @@ switch (_case) do {
 		
 		sleep 180;
 		["hq","side","Urban Movement Hunters Activate."] remoteExec ["OKS_fnc_Chat",0];
-		{[_X,3,east,1000,[],UrbanMovementTrigger] spawn OKS_Rush_Spawner; sleep 120;} foreach [hunt_1,hunt_2,hunt_3,hunt_4,hunt_5,hunt_6,hunt_7];
+		{[_X,3,east,1000,[],UrbanMovementTrigger] spawn OKS_fnc_Lambs_Spawner; sleep 120;} foreach [hunt_1,hunt_2,hunt_3,hunt_4,hunt_5,hunt_6,hunt_7];
 
 	};	
 
@@ -196,8 +189,7 @@ switch (_case) do {
 		
 		sleep 180;
 		["hq","side","Urban Movement Hunters Activate."] remoteExec ["OKS_fnc_Chat",0];
-		{[_X,4,east,1000,[],UrbanMovementTrigger] spawn OKS_Rush_Spawner; sleep 120;} foreach [hunt_1,hunt_2,hunt_3,hunt_4,hunt_5,hunt_6,hunt_7];
-
+		{[_X,"rush",4,east,1000,[],UrbanMovementTrigger] spawn OKS_fnc_Lambs_Spawner; sleep 120;} foreach [hunt_1,hunt_2,hunt_3,hunt_4,hunt_5,hunt_6,hunt_7];
 	};		
 
 	case 9:{
